@@ -53,6 +53,7 @@ class PostsTableSeeder extends Seeder
     	for ($i=1; $i <5 ; $i++) { 
     		$post[$i] = Post::create([
     			'title' => "Mi Post numero {$i}",
+                'url' => str_slug("Mi Post numero {$i}"),
     			'excerpt' => "Extracto de mi Post numero {$i}",
     			'body' => "Cuerpo de mi Post numero {$i}",
             	'category_id'=> 1,
@@ -67,6 +68,7 @@ class PostsTableSeeder extends Seeder
     	for ($i=5; $i <9 ; $i++) { 
     		$post[$i] = Post::create([
     			'title' => "Mi Post numero {$i}",
+                'url' => str_slug("Mi Post numero {$i}"),
     			'excerpt' => "Extracto de mi Post numero {$i}",
     			'body' => "Cuerpo de mi Post numero {$i}",
             	'category_id'=> 2,

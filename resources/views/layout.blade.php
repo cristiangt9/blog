@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="{{ asset('img/mifavicon.png')}}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Zendero</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/framework.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <title>@yield('meta-title', config('app.name'))</title>
+    <meta name="description" content="@yield('meta-content', 'Esta es la pagina de Cristian Gonzalez')">
+    <link rel="stylesheet" href="{{ asset('css/normalize.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/framework.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
@@ -20,10 +22,11 @@
             <nav class="custom-wrapper" id="menu">
                 <div class="pure-menu"></div>
                 <ul class="container-flex list-unstyled">
-                    <li><a href="index.html" class="text-uppercase">Home</a></li>
-                    <li><a href="about.html" class="text-uppercase">About</a></li>
-                    <li><a href="archive.html" class="text-uppercase">Archive</a></li>
-                    <li><a href="contact.html" class="text-uppercase">Contact</a></li>
+                    <li><a href="{{route('home')}}" class="text-uppercase">Home</a></li>
+                    <li><a href="{{route('about')}}" class="text-uppercase">About</a></li>
+                    <li><a href="{{route('archive')}}" class="text-uppercase">Archive</a></li>
+                    <li><a href="{{route('contact')}}" class="text-uppercase">Contact</a></li>
+                    <li><a href="{{route('login')}}" class="text-uppercase">Log In</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,10 +41,10 @@
                 <figure class="logo"><img src="img/logo.png" alt=""></figure>
                 <nav>
                     <ul class="container-flex space-center list-unstyled">
-                        <li><a href="index.html" class="text-uppercase c-white">home</a></li>
-                        <li><a href="about.html" class="text-uppercase c-white">about</a></li>
-                        <li><a href="archive.html" class="text-uppercase c-white">archive</a></li>
-                        <li><a href="contact.html" class="text-uppercase c-white">contact</a></li>
+                    <li><a href="{{route('home')}}" class="text-uppercase">Home</a></li>
+                    <li><a href="{{route('about')}}" class="text-uppercase">About</a></li>
+                    <li><a href="{{route('archive')}}" class="text-uppercase">Archive</a></li>
+                    <li><a href="{{route('contact')}}" class="text-uppercase">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="divider-2"></div>
