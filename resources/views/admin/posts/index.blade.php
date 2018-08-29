@@ -43,13 +43,13 @@
                		<th>{{$post->title}}</th>
                		<th>{{$post->excerpt}}</th>
                		<th>
-               			<a href="#" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
+               			<a href="{{ route('posts.show', ['post' => $post->url] ) }}" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
                			<a href="{{ route('posts.edit', ['post' => $post->url] ) }}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
                     <form style="display:inline" method="POST" action="{{ route('posts.delete', ['post' => $post->url] ) }}"> 
                       @csrf
                       @method('DELETE')
 
-                    <button class="btn btn-xs btn-danger" type="submit"><i class="fa fa-remove"></i></button>
+                    <button class="btn btn-xs btn-danger" onclick="return confirm('¿Estás seguro de querer eliminar esta publicación?')" type="submit"><i class="fa fa-remove"></i></button>
                     </form>
                     
                	@endforeach

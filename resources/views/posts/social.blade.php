@@ -6,7 +6,7 @@
               	</a>
               </li>
               <li>
-              	<a href="https://twitter.com/intent/tweet?url={{ request()->fullUrl() }}&text={{ $post->title }}&via={{ config(app.name) }}&hashtags=zendero" target="_blank" title="Tweet">
+              	<a href="https://twitter.com/intent/tweet?url={{ request()->fullUrl() }}&text={{ $post->title }}&via={{ config('app.name') }}&hashtags=zendero" target="_blank" title="Tweet">
               		<img alt="Tweet" src="{{ asset('img/flat_web_icon_set/Twitter.png')}}">
               	</a>
               </li>

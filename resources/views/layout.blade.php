@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="{{ asset('css/framework.css')}}">
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
@@ -60,6 +62,6 @@
             </div>
         </footer>
     </section>
-
+<script src="/js/app.js"></script>
 </body>
 </html>

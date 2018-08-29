@@ -60,7 +60,7 @@
           </div>
           <div class="form-group {{ $errors->has('category_id') ? 'has-error' : ''}}">
             <label>Categoria</label>
-            <select name="category_id" class="form-control">
+            <select name="category_id" class="form-control select2">
               <option value="">Seleciona una categoría</option>
               @foreach($categories as $category)
                 <option value="{{$category->id}}" {{ old('category_id', $post->category_id) == $category->id ? 'selected' : ''}}>{{$category->name}}</option>
@@ -93,6 +93,27 @@
       </div>
     </div>
   </form>
+  @if($post->photos->count()>0)
+    <div class="col-md-12">
+      <div class="box box-success">
+        <div class="box-body">
+          <div class="row">
+            <label>Fotos:</label>
+            @foreach( $post->photos as $photo)
+              <form method="POST" action="{{ route('photos.delete', $photo)}}">
+                @csrf
+                @method('DELETE')
+                <div class="col-md-2">
+                  <button class="btn btn-xs btn-danger" type="submit" style="position: absolute"><i class="fa fa-remove"></i></button>
+                  <img src="{{ url($photo->url) }}" class="img-responisve" style="width: 40%; height: 40%; ">
+                </div>
+              </form>
+            @endforeach
+          </div>
+        </div>
+      </div>
+    </div>
+  @endif
   </div>
 @stop
 
@@ -127,23 +148,23 @@
   </script>
 
   <script>
-  $(function () {
     //Initialize Select2 Elements
-    $('.select2').select2()
-  })
+    $('.select2').select2({
+      tags: true
+    });
+
   </script>
   
   <script>
-  $(function () {
     // Replace the <textarea id="editor1"> with a CKEditor
     // instance, using default configuration.
-    CKEDITOR.replace('body')
+    CKEDITOR.replace('body');
     //bootstrap WYSIHTML5 - text editor
-    $('.textarea').wysihtml5()
+    $('.textarea').wysihtml5();
 
 
 
-  })
+
 
 
 </script>
@@ -151,9 +172,20 @@
 <script>
 
 		var myDropzone = new Dropzone("div.dropzone",{
-    		url: "/",
+    		url: "/admin/posts/{{ $post->url }}/photos",
+    		acceptedFiles: 'image/*',
+    		maxFilesize: 2,
+    		paramName: 'photo',
+    		headers: {
+    			'X-CSRF-TOKEN': '{{ csrf_token()}}'
+    		},
     		dictDefaultMessage: 'Arrastra las fotos hasta aquí para subirlas ó haz click aqui'
    		});
+
+   		myDropzone.on('error', function(file, res){
+   			var msg = res.photo[0];
+   			$('.dz-error-message:last > span').text(msg);
+   		})
 
     	Dropzone.autoDiscover = false;
 </script>

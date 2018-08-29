@@ -2,9 +2,12 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Storage;
 use App\Post;
 use App\Tag;
 use App\Category;
+use App\User;
+
 
 
 class PostsTableSeeder extends Seeder
@@ -16,9 +19,11 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
+        Storage::disk('public')->deleteDirectory('posts');
         Post::truncate();
         Category::truncate();
         Tag::truncate();
+        User::truncate();
         DB::table('post_tag')->truncate();
 
         	$Category1 = Category::create([
@@ -53,7 +58,6 @@ class PostsTableSeeder extends Seeder
     	for ($i=1; $i <5 ; $i++) { 
     		$post[$i] = Post::create([
     			'title' => "Mi Post numero {$i}",
-                'url' => str_slug("Mi Post numero {$i}"),
     			'excerpt' => "Extracto de mi Post numero {$i}",
     			'body' => "Cuerpo de mi Post numero {$i}",
             	'category_id'=> 1,
@@ -68,7 +72,6 @@ class PostsTableSeeder extends Seeder
     	for ($i=5; $i <9 ; $i++) { 
     		$post[$i] = Post::create([
     			'title' => "Mi Post numero {$i}",
-                'url' => str_slug("Mi Post numero {$i}"),
     			'excerpt' => "Extracto de mi Post numero {$i}",
     			'body' => "Cuerpo de mi Post numero {$i}",
             	'category_id'=> 2,
@@ -77,6 +80,11 @@ class PostsTableSeeder extends Seeder
             ]);
          	$post[$i]->tags()->save($Tag2);
     	}
-         
+
+        $u = new App\User;
+        $u->name = "Cristian Gonzalez";
+        $u->email = "cristiangt9@gmail.com";
+        $u->password = bcrypt('123456');
+        $u->save(); 
     }
 }

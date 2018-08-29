@@ -9,6 +9,22 @@ class Post extends Model
 {
     protected $dates = ['published_at'];
 
+    protected $fillable =[
+
+    	'title', 'body', 'excerpt', 'published_at', 'category_id'
+    ];
+
+    protected static function boot()
+    {
+    	parent::boot();
+
+    	static::deleting(function($post)
+    	{
+    		$post->tags()->detach();
+    		$post->photos->each->delete();
+    	});
+    }
+
 	public function getRouteKeyName()
 	{
 		return 'url';
@@ -19,9 +35,14 @@ class Post extends Model
 		return $this->belongsTo(Category::class);
 	}
 
-	public function tags($value='')
+	public function tags()
 	{
 		return $this->belongsToMany(Tag::class);
+	}
+
+		public function photos()
+	{
+		return $this->hasMany(Photo::class);
 	}
 
 	public function scopePublished($query)
@@ -31,5 +52,38 @@ class Post extends Model
     					->latest('published_at');
     					
 	}
+
+	public function setTitleAttribute($title)
+	{
+		$this->attributes['title'] = $title;
+		$this->attributes['url'] = str_slug($title);
+ 	}
+
+ 	public function setPublishedAtAttribute($published_at)
+ 	{
+ 		$this->attributes['published_at'] = $published_at
+                             ? Carbon::parse($published_at) 
+                             : null;
+ 	}
+
+ 	public function setCategoryIdAttribute($category_id)
+ 	{
+ 		$this->attributes['category_id'] = Category::find($category_id)
+                            ? $category_id:
+                            Category::create(['name' => $category_id])->id;
+ 	}
+
+ 	public function syncTags($tags)
+ 	{
+ 		$tagsIds = [];
+
+        foreach ($tags as $t) {
+            
+            $tagsIds[] = Tag::find($t) ? $t : Tag::create(['name' => $t])->id;
+        }
+
+        return $this->tags()->sync($tagsIds);
+ 	}
+
 }
 
