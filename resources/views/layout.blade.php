@@ -24,11 +24,11 @@
             <nav class="custom-wrapper" id="menu">
                 <div class="pure-menu"></div>
                 <ul class="container-flex list-unstyled">
-                    <li><a href="{{route('home')}}" class="text-uppercase">Home</a></li>
-                    <li><a href="{{route('about')}}" class="text-uppercase">About</a></li>
-                    <li><a href="{{route('archive')}}" class="text-uppercase">Archive</a></li>
-                    <li><a href="{{route('contact')}}" class="text-uppercase">Contact</a></li>
-                    <li><a href="{{route('login')}}" class="text-uppercase">Log In</a></li>
+                    <li><a href="{{route('home')}}" class="text-uppercase {{ request()->routeIs('home') ? 'active' : ''}}">Home</a></li>
+                    <li><a href="{{route('about')}}" class="text-uppercase {{ request()->routeIs('about') ? 'active' : ''}}">About</a></li>
+                    <li><a href="{{route('archive')}}" class="text-uppercase {{ request()->routeIs('archive') ? 'active' : ''}}">Archive</a></li>
+                    <li><a href="{{route('contact')}}" class="text-uppercase {{ request()->routeIs('contact') ? 'active' : ''}}">Contact</a></li>
+                    <li><a href="{{route('login')}}" class="text-uppercase {{ request()->routeIs('login') ? 'active' : ''}}">LogIn</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,10 +43,11 @@
                 <figure class="logo"><img src="img/logo.png" alt=""></figure>
                 <nav>
                     <ul class="container-flex space-center list-unstyled">
-                    <li><a href="{{route('home')}}" class="text-uppercase">Home</a></li>
-                    <li><a href="{{route('about')}}" class="text-uppercase">About</a></li>
-                    <li><a href="{{route('archive')}}" class="text-uppercase">Archive</a></li>
-                    <li><a href="{{route('contact')}}" class="text-uppercase">Contact</a></li>
+                    <li><a href="{{route('home')}}" class="text-uppercase {{ request()->routeIs('home') ? 'active' : ''}}">Home</a></li>
+                    <li><a href="{{route('about')}}" class="text-uppercase {{ request()->routeIs('about') ? 'active' : ''}}">About</a></li>
+                    <li><a href="{{route('archive')}}" class="text-uppercase {{ request()->routeIs('archive') ? 'active' : ''}}">Archive</a></li>
+                    <li><a href="{{route('contact')}}" class="text-uppercase {{ request()->routeIs('contact') ? 'active' : ''}}">Contact</a></li>
+                    <li><a href="{{route('login')}}" class="text-uppercase {{ request()->routeIs('login') ? 'active' : ''}}">LogIn</a></li>
                     </ul>
                 </nav>
                 <div class="divider-2"></div>

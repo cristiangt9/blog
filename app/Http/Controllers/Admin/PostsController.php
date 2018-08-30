@@ -28,6 +28,8 @@ class PostsController extends Controller
     {
 
     	$post = Post::create($request->all());
+        $post->user_id = auth()->id();
+        $post->save();
     	$post->syncTags($request->get('tags'));
     	return back()->with('flash', 'Tu publicación ha sido creada exitosamente');
     }

@@ -11,7 +11,7 @@ class Post extends Model
 
     protected $fillable =[
 
-    	'title', 'body', 'excerpt', 'published_at', 'category_id'
+    	'title', 'body', 'excerpt', 'published_at', 'category_id','user_id',
     ];
 
     protected static function boot()
@@ -40,9 +40,14 @@ class Post extends Model
 		return $this->belongsToMany(Tag::class);
 	}
 
-		public function photos()
+	public function photos()
 	{
 		return $this->hasMany(Photo::class);
+	}
+
+	public function user()	
+	{
+		return $this->belongsTo(User::class);
 	}
 
 	public function scopePublished($query)
@@ -53,10 +58,20 @@ class Post extends Model
     					
 	}
 
+	public function isPublished()
+	{
+		return $this->published_at < today();
+	}
+
 	public function setTitleAttribute($title)
 	{
 		$this->attributes['title'] = $title;
-		$this->attributes['url'] = str_slug($title);
+		$url = str_slug($title);
+		$duplicateUrlCount = Post::where('url', 'LIKE',"{$url}%")->count();
+		if ($duplicateUrlCount) {
+			$url .= "-" . uniqid();
+		}
+		$this->attributes['url'] = $url; 
  	}
 
  	public function setPublishedAtAttribute($published_at)

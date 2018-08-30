@@ -62,7 +62,8 @@ class PostsTableSeeder extends Seeder
     			'body' => "Cuerpo de mi Post numero {$i}",
             	'category_id'=> 1,
             	'published_at'=> Carbon::now()->subDays(11)->addDays($i),
-            	'created_at'=> Carbon::now()->subDays(11)->addDays($i+1)
+            	'created_at'=> Carbon::now()->subDays(11)->addDays($i+1),
+                'user_id' => 1
             ]);
             $post[$i]->tags()->save($Tag1);
             $post[$i]->tags()->save($Tag2);
@@ -76,7 +77,8 @@ class PostsTableSeeder extends Seeder
     			'body' => "Cuerpo de mi Post numero {$i}",
             	'category_id'=> 2,
             	'published_at'=> Carbon::now()->subDays(11)->addDays($i),
-            	'created_at'=> Carbon::now()->subDays(11)->addDays($i+1)
+            	'created_at'=> Carbon::now()->subDays(11)->addDays($i+1),
+                'user_id' => 1
             ]);
          	$post[$i]->tags()->save($Tag2);
     	}

@@ -1,13 +1,13 @@
 @extends('layout')
 
-@section('meta-title',$post->title."| Blog")
+@section('meta-title',$post->title." | Blog")
 
 @section('meta-content',"Blog |". $post->excerpt)
 
 @section('content')
 
   <script id="dsq-count-scr" src="//zendero.disqus.com/count.js" async></script>
-  <article class="post image-w-text container">
+  <article class="post text container">
             @if($post->photos->count() === 1)
               <figure><img src="{{ url($post->photos->first()->url)}}" alt="" class="img-responsive"></figure>
             @elseif($post->photos->count() > 1)
@@ -16,32 +16,33 @@
     <div class="content-post">
       <header class="container-flex space-between">
         <div class="date">
-          <span class="c-gris">{{ $post->published_at->format('M d')}}</span>
+          <span class="c-gris-3">{{ $post->published_at->format('M d')}} / {{ $post->user->name}}
         </div>
         <div class="post-category">
-          <span class="category">{{ $post->category->name}}</span>
+          <span class="category"><a href="{{route('categories.show', $post->category)}}">{{ $post->category->name}}</a>
+          </span>
         </div>
       </header>
       <h1>{{ $post->title }}</h1>
         <div class="divider"></div>
-        <div class="image-w-text">
-          <figure class="block-left"><img src="{{ asset('img/img-post-2.png')}}" alt=""></figure>
-          <div>
-            {!!$post->body!!}
-          </div>
+           <div class="image-w-text">
+             {!!$post->body!!}
+           </div>  
+      <footer class="container-flex space-between">
+			  <div class="tags container-flex ">
+          	@foreach($post->tags as $tag)
+                    <span class="tag c-gris-3 text-capitalize"><a href="{{route('tags.show', $tag)}}">#{{$tag->name}}</a></span>
+               @endforeach
         </div>
 
-        <footer class="container-flex space-between">
-			@include('posts.social')
-          <div class="tags container-flex">
-          	@foreach($post->tags as $tag)
-                    <span class="tag c-gris text-capitalize">#{{$tag->name}}</span>
-               @endforeach
-          </div>
       </footer>
-      <div class="comments">
+      
+      @include('posts.social')
+      <div class="comments"></div>
       <div class="divider"></div>
-        <div id="disqus_thread"></div>
+      <div id="disqus_thread"></div>
+    </div>
+  </article>
 <script>
 
 /**
