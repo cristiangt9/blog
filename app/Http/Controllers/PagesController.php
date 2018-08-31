@@ -10,11 +10,15 @@ class PagesController extends Controller
     public function home()
     {
     	$posts = Post::published()->paginate(5);
-    	return view('home1',compact('posts'));
+    	return view('home-rango',compact('posts'));
     }
 
     public function index()
     {
     	return view('admin.dashboard');
+    }
+    public function about()
+    {
+    	return view('about-rango');
     }
 }
