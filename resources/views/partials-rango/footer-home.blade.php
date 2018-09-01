@@ -69,11 +69,11 @@
 						<ul>
 							<li><a href="{{ route('home')}}">Inicio</a></li>
 							<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-							<li><a href="services.html">Habilidades</a></li>
-							<li><a href="services.html">Servicios</a></li>
-							<li><a href="portfolio.html">Portafolio</a></li>
-							<li><a href="blog.html">Blog</a></li>
-							<li><a href="contact.html">Contactame</a></li>
+							<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
+							<li><a href="{{ route('servicios')}}">Servicios</a></li>
+							<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
+							<li><a href="{{ route('blog')}}">Blog</a></li>
+							<li><a href="{{ route('contactame')}}">Contactame</a></li>
 						</ul>
 					</div>
 
@@ -88,7 +88,7 @@
 							<li><a href="#">Mi equipo</a></li>
 							<li><a href="#">History</a></li>
 							<li><a href="#">Company</a></li>
-							<li><a href="#">Support</a></li>
+							<li><a href="{{ route('dashboard')}}">Support</a></li>
 						</ul>
 					</div>
 

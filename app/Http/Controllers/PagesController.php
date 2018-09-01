@@ -9,8 +9,7 @@ class PagesController extends Controller
 {
     public function home()
     {
-    	$posts = Post::published()->paginate(5);
-    	return view('home-rango',compact('posts'));
+    	return view('home-rango');
     }
 
     public function index()
@@ -20,5 +19,26 @@ class PagesController extends Controller
     public function about()
     {
     	return view('about-rango');
+    }
+    public function skills()
+    {
+    	return view('skills-rango');
+    }
+    public function services()
+    {
+    	return view('services-rango');
+    }
+    public function portfolio()
+    {
+    	return view('portfolio-rango');
+    }
+    public function blog()
+    {
+    	$posts = Post::published()->paginate(5);
+    	return view('blog',compact('posts'));
+    }
+    public function contact()
+    {
+    	return view('contact-rango');
     }
 }

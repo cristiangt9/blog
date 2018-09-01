@@ -16,20 +16,19 @@
 	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
 		
 		<!-- Logo -->
-		<div class="logo mr-auto">
-			<a href="#"><span>C</span>ristian <span>G</span>onzález </a>
-		</div>
+		@include('partials-rango.logo')
+
 
 		<!-- Navigation -->
 		<nav class="main_nav justify-self-end text-right">
 			<ul>
 				<li><a href="{{ route('home')}}">Inicio</a></li>
 				<li class="active"><a href="#">Sobre mi</a></li>
-				<li><a href="services.html">Habilidades</a></li>
-				<li><a href="services.html">Servicios</a></li>
-				<li><a href="portfolio.html">Portafolio</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contactame</a></li>
+				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
+				<li><a href="{{ route('servicios')}}">Servicios</a></li>
+				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
+				<li><a href="{{ route('blog')}}">Blog</a></li>
+				<li><a href="{{ route('contactame')}}">Contactame</a></li>
 			</ul>
 	@include('partials-rango.header-home')
 
@@ -41,11 +40,11 @@
 			<ul class="menu_mm">
 				<li class="menu_mm"><a href="{{ route('home')}}">Home</a></li>
 				<li class="menu_mm active"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li class="menu_mm"><a href="services.html">Habilidades</a></li>
-				<li class="menu_mm"><a href="services.html">Servicios</a></li>
-				<li class="menu_mm"><a href="portfolio.html">Portafolio</a></li>
-				<li class="menu_mm"><a href="blog.html">Blog</a></li>
-				<li class="menu_mm"><a href="contact.html">Contactame</a></li>
+				<li class="menu_mm"><a href="{{ route('habilidades')}}">Habilidades</a></li>
+				<li class="menu_mm"><a href="{{ route('servicios')}}">Servicios</a></li>
+				<li class="menu_mm"><a href="{{ route('portafolio')}}">Portafolio</a></li>
+				<li class="menu_mm"><a href="{{ route('blog')}}">Blog</a></li>
+				<li class="menu_mm"><a href="{{ route('contactame')}}">Contactame</a></li>
 			</ul>
 		</div>
 	</div>
@@ -54,7 +53,7 @@
 
 	<div class="home_about">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(rango/images/home_background.jpg)"></div>
+			<div class="home_background prlx" style="background-image:url(rango/images/home_background1.png)"></div>
 		</div>
 		
 		<div class="home_title">

@@ -1,7 +1,7 @@
 
 @extends('layout')
 
-@section('meta-title','Blog Zendero')
+@section('meta-title','CG - Blog')
 
 @section('meta-content','Esta es la pagina web de Cristian Gonzalez, encontraras sus trabajos y habilidades')
 

@@ -13,6 +13,11 @@
 
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/sobre-mi', 'PagesController@about')->name('sobre-mi');
+Route::get('/habilidades', 'PagesController@skills')->name('habilidades');
+Route::get('/servicios', 'PagesController@services')->name('servicios');
+Route::get('/portafolio', 'PagesController@portfolio')->name('portafolio');
+Route::get('/blog', 'PagesController@blog')->name('blog');
+Route::get('/contactame', 'PagesController@contact')->name('contactame');
 
 Route::get('/about.html', function () {return view('about');})->name('about');
 Route::get('/archive.html', function () {return view('archive');})->name('archive');
@@ -46,15 +51,4 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 //Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 //Route::post('register', 'Auth\RegisterController@register');
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes Rango
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-Route::get('/', 'PagesController@home')->name('home');

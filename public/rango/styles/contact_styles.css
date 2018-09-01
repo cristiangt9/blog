@@ -271,7 +271,7 @@ section
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px color: #00AFFA;
 	background: transparent;
 }
 .button a
@@ -282,7 +282,7 @@ section
 	font-weight: 700;
 	line-height: 50px;
 	text-transform: uppercase;
-	color: #452b78;
+	color: color: #00AFFA;
 }
 .prlx_parent
 {
@@ -302,6 +302,7 @@ section
 	width: 100%;
 	height: 372px;
 }
+
 .home_background_container
 {
 	position: absolute;
@@ -330,13 +331,15 @@ section
 	left: 0;
 	width: 100%;
 	height: 128px;
-	background: rgba(27, 11, 51, 0.52);
+	/*background: rgba(27, 11, 51, 0.52);*/
 	z-index: 10;
 }
 .header.scrolled
 {
 	height: 80px;
-	background: rgba(27, 11, 51, 0.92);
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+	/*rgba(0, 128, 255, 0.92);*/
+	/*background: rgba(27, 11, 51, 0.92);*/
 }
 
 /*********************************
@@ -348,18 +351,27 @@ section
 	padding-left: 57px;
 	flex-basis: 50%;
 }
+.foot.logo 
+{
+	padding-left: 30px;
+}
 .logo a
 {
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: 500;
-	color: #fefefe;
+	color: #00AFFA;
+	/*color: #fefefe;*/
 	letter-spacing: 0.1em;
 	line-height: 128px;
+}
+.scrolled .logo a
+{
+	color: #fefefe;
 }
 .logo a span
 {
 	font-weight: 800;
-	color: #ff6b09;
+	color: #FF8100;
 	text-transform: uppercase;
 }
 
@@ -374,7 +386,7 @@ section
 .main_nav ul
 {
 	display: inline-block;
-	margin-right: 100px;
+	margin-right: 0px;
 	-webkit-transform: translateY(-4px);
 	-moz-transform: translateY(-4px);
 	-ms-transform: translateY(-4px);
@@ -393,14 +405,32 @@ section
 .main_nav ul li a
 {
 	display: block;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: 400;
 	line-height: 40.51px;
+	color: #00AEFF;/*#FFFFFF;*/
+	position: relative;
+	border-bottom: 3px solid transparent;
+
+}
+
+.main_nav ul li a:focus{
+	border-bottom: 3px solid #52d3aa;
+}
+.main_nav ul li  a:hover{
+	border-bottom: 3px solid #52d3aa;
+
+}
+
+.scrolled .main_nav ul li a
+{
+
 	color: #FFFFFF;
 }
 .main_nav ul li.active a
 {
 	font-weight: 700;
+	border-bottom: 3px solid #52d3aa;
 }
 
 /*********************************
@@ -428,7 +458,7 @@ section
 }
 .search_button:active
 {
-	background: #301b54;
+	background: #00AFFA;
 }
 .search_form
 {
@@ -451,7 +481,7 @@ section
 	width: 100%;
 	height: 100%;
 	background: #FFFFFF;
-	color: #1b0b32;
+	color: #00AFFA;
 	padding-left: 20px;
 	outline: none !important;
 	border: none !important;
@@ -474,15 +504,20 @@ section
 {
 	font-size: 24px;
 	padding: 10px;
-	color: #FFFFFF;
+	color: #00AFFA;
+}
+.scrolled .hamburger_container i
+{
+	font-size: 24px;
+	padding: 10px;
+	color: #FFF;
 }
 .hamburger_container:hover i
 {
 	color: #ff6b09;
 }
-
 /*********************************
-3.2 Home Title
+3.1.5 Home Title
 *********************************/
 
 .home_title
@@ -501,9 +536,10 @@ section
 {
 	font-size: 30px;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: #00AFFA;
 	margin-bottom: 15px;
 }
+
 
 /*********************************
 3.3 Next Section Scroll
@@ -718,7 +754,7 @@ section
 	height: 45px;
 	border: none;
 	border-bottom: solid 1px #e1e1e1;
-	color: #452b78;
+	color: color: #00AFFA;
 }
 
 .input_field::-webkit-input-placeholder,
@@ -726,7 +762,7 @@ section
 {
 	font-style: normal !important;
 	font-size: 12px !important;
-	color: #909090 !important;
+	color: #00AFFA !important;
 	font-weight: 400 !important;
 }
 .input_field:-moz-placeholder,
@@ -734,7 +770,7 @@ section
 {
 	font-style: normal !important;
 	font-size: 12px !important;
-	color: #909090 !important;
+	color: #00AFFA !important;
 	font-weight: 400 !important;
 }
 .input_field::-moz-placeholder,
@@ -742,7 +778,7 @@ section
 {
 	font-style: normal !important;
 	font-size: 12px !important;
-	color: #909090 !important;
+	color: #00AFFA !important;
 	font-weight: 400 !important;
 } 
 .input_field:-ms-input-placeholder,
@@ -750,7 +786,7 @@ section
 { 
 	font-style: normal !important;
 	font-size: 12px !important;
-	color: #909090 !important;
+	color: #00AFFA !important;
 	font-weight: 400 !important;
 }
 .input_field::input-placeholder,
@@ -758,7 +794,7 @@ section
 {
 	font-style: normal !important;
 	font-size: 12px !important;
-	color: #909090 !important;
+	color: #00AFFA !important;
 	font-weight: 400 !important;
 }
 
@@ -766,27 +802,27 @@ section
 .input_field:focus::-webkit-input-placeholder,
 .text_field:focus::-webkit-input-placeholder
 {
-	color: #452b78 !important;
+	color: #00AFFA !important;color: 
 }
 .input_field:focus:-moz-placeholder,
 .text_field:focus:-moz-placeholder
 {
-	color: #452b78 !important;
+	color: #00AFFA!important;
 }
 .input_field:focus::-moz-placeholder,
 .text_field:focus::-moz-placeholder
 {
-	color: #452b78 !important;
+	color: #00AFFA !important;
 } 
 .input_field:focus:-ms-input-placeholder,
 .text_field:focus:-ms-input-placeholder
 { 
-	color: #452b78 !important;
+	color: #00AFFA !important;
 }
 .input_field:focus::input-placeholder,
 .text_field:focus::input-placeholder
 {
-	color: #452b78 !important;
+	color: #00AFFA !important;
 }
 .text_field
 {
@@ -794,7 +830,7 @@ section
 	border: none;
 	border-bottom: solid 1px #e1e1e1;
 	margin-bottom: 12px;
-	color: #452b78;
+	color: #00AFFA;
 }
 .reply_form_name,
 .reply_form_email
@@ -826,7 +862,7 @@ section
 .input_field:focus,
 .text_field:focus
 {
-	border-bottom: solid 1px #452b78 !important;
+	border-bottom: solid 1px #00AFFA !important;
 	box-shadow: none !important;
 	outline: none !important;
 }
@@ -837,19 +873,19 @@ section
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px #00AFFA;
 	background: transparent;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 50px;
 	text-transform: uppercase;
-	color: #452b78;
+	color: #00AFFA;
 	cursor: pointer;
 }
 .reply_submit_btn:hover
 {
-	background: #452b78;
+	background: #00AFFA;
 	color: #FFFFFF;
 }
 
@@ -869,7 +905,7 @@ section
 }
 .contact_logo a
 {
-	color: #452b78;
+	color: #00AFFA;
 	line-height: 1;
 }
 .contact_info_container p
@@ -894,7 +930,7 @@ section
 	height: 33px;
 	color: #FFFFFF;
 	font-size: 18px;
-	background: #452b78;
+	background: #00AFFA;
 	border-radius: 50%;
 	float: left;
 }
@@ -928,7 +964,6 @@ section
 {
 	padding-top: 99px;
 	padding-bottom: 82px;
-	border-top: solid 1px #dcdcdc;
 }
 .footer_logo
 {
@@ -937,7 +972,7 @@ section
 }
 .footer_logo a
 {
-	color: #452b78;
+	color: #00AFFA;
 	line-height: 1;
 }
 .footer_intro p
@@ -969,7 +1004,7 @@ section
 }
 .footer_social ul li a:hover i
 {
-	color: #1b0d37;
+	color: #00AFFA;
 }
 .footer_cr
 {
@@ -1018,5 +1053,75 @@ section
 }
 .footer_col ul li a:hover
 {
-	color: #28262d;
+	color: #00AFFA;
+}
+.footer_dev{
+	color: #00AFFA;
+}
+/*********************************
+11. Newsletter
+*********************************/
+
+.newsletter
+{
+	width: 100%;
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+}
+.newsletter_content
+{
+	padding-top: 110px;
+	padding-bottom: 141px;
+}
+.newsletter_title
+{
+
+}
+.newsletter_title h1
+{
+	color: #FFFFFF;
+	margin-bottom: 13px;
+}
+.newsletter_title span
+{
+	font-size: 16px;
+	font-weight: 500;
+	color: #FFFFFF;
+}
+.newsletter_form_container
+{
+	text-align: left;
+	margin-top: 77px;
+}
+.newsletter_email
+{
+	height: 53px;
+	background: #00AFFA;/*#452b78;*/
+	border: solid 2px #00AFFA;
+	padding-left: 30px;
+	width: calc(100% - 174px - 26px);
+	margin-right: 22px;
+	color: #FFFFFF;
+
+}
+.newsletter_email:focus
+{
+	outline: none;
+	border: none;
+}
+.newsletter_submit_button
+{
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 700;
+}
+.newsletter_submit_button:hover
+{
+	background: #00AFFA;
+}
+.newsletter_submit_button:focus
+{
+	outline: none;
+	border: none;
 }

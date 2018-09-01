@@ -217,7 +217,10 @@ desired effect
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <form style="display:inline" method="POST" action="{{ route('logout')}}"> 
+                      @csrf
+                    <button class="btn btn-flat btn-danger" onclick="return confirm('¿Estás seguro de querer salir?')" type="submit"><i class="fa fa-sign-out"></i>Sign out</button>
+                    </form>
                 </div>
               </li>
             </ul>

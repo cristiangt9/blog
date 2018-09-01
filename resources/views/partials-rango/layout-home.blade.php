@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head -->
 <head>
 <title>CG - Inicio</title>
 @include('partials-rango.head-home')
@@ -13,20 +14,19 @@
 	<header class="header d-flex flex-row justify-content-end align-items-center trans_200">
 		
 		<!-- Logo -->
-		<div class="logo mr-auto">
-			<a href="#"><span>C</span>ristian <span>G</span>onzález </a>
-		</div>
+		@include('partials-rango.logo')
+
 
 		<!-- Navigation -->
 		<nav class="main_nav justify-self-end text-right">
 			<ul>
 				<li class="active"><a href="#">Inicio</a></li>
 				<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li><a href="services.html">Habilidades</a></li>
-				<li><a href="services.html">Servicios</a></li>
-				<li><a href="portfolio.html">Portafolio</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contactame</a></li>
+				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
+				<li><a href="{{ route('servicios')}}">Servicios</a></li>
+				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
+				<li><a href="{{ route('blog')}}">Blog</a></li>
+				<li><a href="{{ route('contactame')}}">Contactame</a></li>
 			</ul>
 	@include('partials-rango.header-home')
 	<!-- Menu -->

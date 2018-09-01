@@ -11,3 +11,4 @@
 <script src="{{ asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
 <script src="{{ asset('rango/plugins/easing/easing.js')}}"></script>
 <script src="{{ asset('rango/js/custom.js')}}"></script>
+<script src="{{ asset('rango/js/portfolio_custom.js')}}"></script>
