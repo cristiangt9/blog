@@ -23,7 +23,7 @@
 		<nav class="main_nav justify-self-end text-right">
 			<ul>
 				<li><a href="{{ route('home')}}">Inicio</a></li>
-				<li class="active"><a href="#">Sobre mi</a></li>
+				<li class="active"><a href="#">Sobre mí</a></li>
 				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
 				<li><a href="{{ route('servicios')}}">Servicios</a></li>
 				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
@@ -53,7 +53,7 @@
 
 	<div class="home_about">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(rango/images/home_background1.png)"></div>
+			<div class="home_background prlx" style="background-image:url(rango/images/home_background2.png)"></div>
 		</div>
 		
 		<div class="home_title">
@@ -75,18 +75,18 @@
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="icon_box_title">
-						<h1>A strong team with a strong background</h1>
+						<h1>Sobre mí</h1>
 					</div>
-					<div class="button icon_box_button trans_200">
+{{-- 					<div class="button icon_box_button trans_200">
 						<a href="#" class="trans_200">discover more</a>
-					</div>
+					</div> --}}
 				</div>
 
 				<div class="col-lg-4 icon_box_col">
 
 					<!-- Icon Box Item -->
 					<div class="icon_box_paragraph">
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae enim enim. Sed nec dignissim purus. Praesent bibendum tristique nulla, quis fringilla mauris sagittis ut. Maecenas sit amet varius nulla. Praesent faucibus ipsum.</p>
+						<p>Ingeniero de Sistemas desde 2015, programador, diseñador y analista de datos. Migrante desde pequeño desarrolle capacidades de apatación a nuevos entornos disfrutando siempre el lugar donde me encuentro pero sin olvidar de donde vengo. </p>
 					</div>
 
 				</div>
@@ -95,7 +95,7 @@
 
 					<!-- Icon Box Item -->
 					<div class="icon_box_paragraph">
-						<p>Si non ligula sodales vestibulum. Nam nec augue a leo ullamcorper sollicitudin. Suspendisse mattis malesuada tortor sit amet accumsan. Mauris eu elit quis enim pretium finibus. Integer tempor, augue et lacinia cursus, nisl elit elementum magna, non blandit nisi ipsum vitae nulla. </p>
+						<p>Cursé mis estudios de ingeniero en la Universidad de los Andes en Mérida, como ingeniro de sistemas donde empezó mi pasión por la programación. En ella obtuve mis mejores momentos tanto en el ambito estudiantil como en mis desarrollo personal. </p>
 					</div>
 					
 				</div>
@@ -111,7 +111,7 @@
 
 				<div class="col-lg-6 v_slider_section_image">
 					<div class="v_slider_image">
-						<img src="images/testimonials.jpg" alt="">
+						<img src="{{asset('rango/images/testimonials.jpg')}}" alt="">
 					</div>
 				</div>
 
@@ -119,123 +119,80 @@
 					
 					<!-- Testimonials Slider -->
 					<div class="v_slider_title">
-						<h1>What clients say</h1>
+						<h1>Mis Objetivos</h1>
 					</div>
-
 					<div class="v_slider_container">
-
 						<!-- Vertical Slider -->
 						<div class="v_slider">
-
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
+								<div class="person_meta">
+									<div class="person_name">Superación</div>
+										<div class="person_title">...</div>
+								</div>
+								<p>Superarme en todos los aspectos de mi vida, brindando lo mejor de mí cada día, buscando no solo cumplir el obijetivo sino tambien aportar un diferencial a mi trabajo, mejoran siempre tanto en el aspecto laboral como en el aspecto personal.</p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
 									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
 								</div>
 							</div>
-
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
+								<div class="person_meta">
+										<div class="person_name">Aprendizaje continuo</div>
+										<div class="person_title">...</div>
+								</div>
+								<p>Todos sabemos que cada día se aprenden algo nuevo, pero es mi objetivo tomar dicho aprendizaje y canalizarlo para convertime en un mejor profesional y desechar todo aquello que limita en mi desarrollo . rrrrr rrrrrrrrr rrrrrr rrrr rrrr rrrrrr.</p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
 									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
 								</div>
 							</div>
-
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
+								<div class="person_meta">
+										<div class="person_name">Experiencia</div>
+										<div class="person_title">...</div>
+								</div>
+								<p>Complementar mi enseñanza académica con la tan valorada experiencia profesional que me permita crecer profesionalmente y aplicar mejor mis conocimientos. rrrrrrrrrrrr rrrrrrrrrrrr rrrrrrrrrrrrrrr rrrrrrrrrrrrr rrrrrrrrrrrrrr rrrrrrrrrrrr rrrrrrr. </p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
 									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
 								</div>
 							</div>
-
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
+									<div class="person_meta">
+										<div class="person_name">Confianza</div>
+										<div class="person_title">...</div>
+									</div>
+								<p>Desempeñar y desarrollar todas mis capacidades, consiguiendo un excelente resultado en la labor asignada, adquiriendo a través de la confianza en mi depositada, una experiencia invaluables, con la cual conseguir dar un paso importante en mi superación personal.</p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
 									</div>
+								</div>
+							</div>
+							<!-- Vertical Slider Item -->
+							<div class="v_slider_item">
 									<div class="person_meta">
 										<div class="person_name">Michael Smith</div>
 										<div class="person_title">Manager</div>
 									</div>
-								</div>
-							</div>
-
-							<!-- Vertical Slider Item -->
-							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
+								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. </p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
 									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
+
 								</div>
 							</div>
-
-							<!-- Vertical Slider Item -->
-							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Vertical Slider Item -->
-							<div class="v_slider_item">
-								<span>“</span>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut.</p>
-								<div class="person d-flex flex-row">
-									<div class="person_image">
-										<img src="images/person_1.png" alt="">
-									</div>
-									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>

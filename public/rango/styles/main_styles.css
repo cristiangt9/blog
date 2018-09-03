@@ -85,6 +85,7 @@ p
 {
 	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
+	text-align: justify;
 	line-height: 1.86;
 	font-weight: 400;
 	color: #909090;
@@ -990,6 +991,10 @@ section
 	outline: none !important;
 	border: none !important;
 }
+.v_slider_item p
+{
+	text-align: justify;
+}
 .v_slider_item h1
 {
 	line-height: 52px;
@@ -1791,7 +1796,7 @@ section
 {
 	position: absolute;
 	top: -71px;
-	left: -99px;
+	left: -3px;
 	width: 100%;
 	height: auto;
 }
@@ -1803,7 +1808,7 @@ section
 }
 .team_member_name
 {
-	font-size: 24px;
+	font-size: 22px;
 	font-weight: 500;
 	color: #28262d;
 	margin-bottom: -10px;
@@ -2032,6 +2037,7 @@ section
 .footer_intro p
 {
 	margin-bottom: 0px;
+	text-align: justify;
 }
 .footer_social
 {
@@ -2066,6 +2072,10 @@ section
 	font-weight: 500;
 	color: #cacaca;
 	margin-top: 65px;
+}
+.footer_cr a
+{
+	color: #cacaca;
 }
 .footer_cr_2
 {

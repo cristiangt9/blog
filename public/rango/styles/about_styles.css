@@ -1067,6 +1067,10 @@ section
 	color: #cacaca;
 	margin-top: 65px;
 }
+.footer_cr a
+{
+	color: #cacaca;
+}
 .footer_cr_2
 {
 	display: none;

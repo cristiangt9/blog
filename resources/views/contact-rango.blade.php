@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CG - Contact</title>
+<title>CG - Contáctame</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="RanGO Project">
@@ -43,7 +43,7 @@
 	<div class="menu_container">
 		<div class="menu menu_mm text-right">
 			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-				<li class="menu_mm"><a href="{{ route('home')}}">Home</a></li>
+				<li class="menu_mm"><a href="{{ route('home')}}">Inicio</a></li>
 				<li class="menu_mm"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
 				<li class="menu_mm"><a href="{{ route('habilidades')}}">Habilidades</a></li>
 				<li class="menu_mm"><a href="{{ route('servicios')}}">Servicios</a></li>
@@ -61,7 +61,7 @@
 		</div>
 		
 		<div class="home_title">
-			<h2>Contact</h2>
+			<h2>Contáctame</h2>
 			<div class="next_section_scroll">
 				<div class="next_section nav_links" data-scroll-to=".contact">
 					<i class="fas fa-chevron-down trans_200"></i>
@@ -97,21 +97,21 @@
 
 					<div class="reply">
 						
-						<div class="reply_title">Leave a reply</div>
+						<div class="reply_title">Envíame un mensaje</div>
 						<div class="reply_form_container">
 							
 							<!-- Reply Form -->
 
 							<form id="reply_form" action="post">
 								<div>
-									<input id="reply_form_name" class="input_field reply_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
+									<input id="reply_form_name" class="input_field reply_form_name" type="text" placeholder="Nombre" required="required" data-error="Name is required.">
 									<input id="reply_form_email" class="input_field reply_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-									<input id="reply_form_subject" class="input_field reply_form_subject" type="text" placeholder="Subject" required="required" data-error="Subject is required.">
-									<textarea id="reply_form_message" class="text_field reply_form_message" name="message"  placeholder="Message" rows="4" required data-error="Please, write us a message."></textarea>
+									<input id="reply_form_subject" class="input_field reply_form_subject" type="text" placeholder="Asunto" required="required" data-error="Subject is required.">
+									<textarea id="reply_form_message" class="text_field reply_form_message" name="message"  placeholder="Mensaje" rows="4" required data-error="Please, write us a message."></textarea>
 								</div>
 								<div>
 									<button id="reply_form_submit" type="submit" class="reply_submit_btn trans_300" value="Submit">
-										send reply
+										Enviar mensaje
 									</button>
 								</div>
 
@@ -128,21 +128,21 @@
 
 					<div class="contact_info">
 
-						<div class="contact_title">Contact info</div>
+						<div class="contact_title">Información de Contacto</div>
 						
 						<div class="contact_info_container">
 
 							@include('partials-rango.logo')
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae enim enim. Sed nec dignissim purus.</p>
+							<p>Si deseas contactarme, enviame un mesaje mediante el fomulario o enviame un correo con tus datos. Saludos</p>
 
 							<div class="address_container clearfix">
 								<div class="contact_info_icon">i</div>
 								<div class="contact_info_content">
 									<ul>
-										<li class="address">C/ Libertad, 34</li>
-										<li class="city">05200 Arévalo</li>
-										<li class="phone">0034 37483 2445 322</li>
-										<li class="email">hello@company.com</li>
+										<li class="address">La Nueva Tola</li>
+										<li class="city">Quito, Ecuador</li>
+										<li class="phone">+593 02 257 2656</li>
+										<li class="email">contact@mywebcg.site</li>
 									</ul>									
 								</div>
 							</div>
@@ -178,6 +178,6 @@
 <script src="{{ asset('rango/js/CustomGoogleMapMarker.js')}}"></script>
 <script src="{{ asset('rango/plugins/easing/easing.js')}}"></script>
 <script src="{{ asset('rango/js/contact_custom.js')}}"></script>
-</body>
+
 
 </html>

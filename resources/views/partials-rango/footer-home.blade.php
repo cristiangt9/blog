@@ -12,7 +12,7 @@
 							<a href="#"><span>C</span>ristian <span>G</span>onzález </a>
 						</div>
 
-						<p><span class="footer_dev">Desarrollador web.</span> Apasionado de la informática e Internet y especialista en hacer tu página web una realidad.</p>
+						<p><span class="footer_dev">Desarrollador web.</span> Ingeniero, apasionado por la informática y la Internet, especialista en hacer de tu página web una realidad.</p>
 						
 						<!-- Social -->
 						<div class="footer_social">
@@ -42,20 +42,20 @@
 				<div class="col-lg-2">
 
 					<div class="footer_col">
-						<div class="footer_col_title">Services</div>
+						<div class="footer_col_title">Servicios</div>
 						<ul>
-							<li><a href="#">Social media</a></li>
-							<li><a href="#">Management</a></li>
-							<li><a href="#">Branding</a></li>
+							<li><a href="#">Diseño Grafico</a></li>
+							<li><a href="#">Diseño web</a></li>
+							<li><a href="#">SEO</a></li>
 						</ul>
 					</div>
 					
 					<div class="footer_col">
-						<div class="footer_col_title">Aditionals</div>
+						<div class="footer_col_title">Otros</div>
 						<ul>
 							<li><a href="#">Social media</a></li>
-							<li><a href="#">Management</a></li>
-							<li><a href="#">Branding</a></li>
+							<li><a href="#">Contenido web</a></li>
+							<li><a href="#">Big Data</a></li>
 						</ul>
 					</div>
 
@@ -65,7 +65,7 @@
 				<div class="col-lg-2">
 
 					<div class="footer_col">
-						<div class="footer_col_title">Menu</div>
+						<div class="footer_col_title">Menú</div>
 						<ul>
 							<li><a href="{{ route('home')}}">Inicio</a></li>
 							<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
@@ -86,9 +86,9 @@
 						<div class="footer_col_title">Sobre mí</div>
 						<ul>
 							<li><a href="#">Mi equipo</a></li>
-							<li><a href="#">History</a></li>
-							<li><a href="#">Company</a></li>
-							<li><a href="{{ route('dashboard')}}">Support</a></li>
+							<li><a href="#">Historia</a></li>
+							<li><a href="#">Compañia</a></li>
+							<li><a href="{{ route('dashboard')}}">Soporte</a></li>
 						</ul>
 					</div>
 
@@ -98,12 +98,12 @@
 				<div class="col-lg-2">
 
 					<div class="footer_col">
-						<div class="footer_col_title">Community</div>
+						<div class="footer_col_title">Web</div>
 						<ul>
 							<li><a href="#">Blog</a></li>
-							<li><a href="#">Forums</a></li>
+							<li><a href="#">Foros</a></li>
 							<li><a href="#">Q&A</a></li>
-							<li><a href="#">Purposes</a></li>
+							<li><a href="#">Mapa del sitio</a></li>
 						</ul>
 					</div>
 

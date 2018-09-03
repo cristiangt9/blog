@@ -1,6 +1,6 @@
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(rango/images/slider_background.png)"></div>
+			<div class="home_background prlx" style="background-image:url(rango/images/slider_background1.png)"></div>
 		</div>
 		
 		<!-- Hero Slider -->

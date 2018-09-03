@@ -147,35 +147,35 @@ h6::selection
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #9988ba !important;
+	color: #FFF !important;
 }
 :-moz-placeholder /* older Firefox*/
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #9988ba !important;
+	color: #FFF !important;
 }
 ::-moz-placeholder /* Firefox 19+ */ 
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #9988ba !important;
+	color: #FFF !important;
 } 
 :-ms-input-placeholder
 { 
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #9988ba !important;
+	color: #FFF !important;
 }
 ::input-placeholder
 {
 	font-size: 14px !important;
 	font-style: italic !important;
 	font-weight: 400 !important;
-	color: #9988ba !important;
+	color: #FFF !important;
 }
 .form-control
 {
@@ -267,7 +267,7 @@ section
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px #00AFFA;
 	background: transparent;
 }
 .button a
@@ -278,7 +278,7 @@ section
 	font-weight: 700;
 	line-height: 50px;
 	text-transform: uppercase;
-	color: #452b78;
+	color: #00AFFA;
 }
 .prlx_parent
 {
@@ -766,7 +766,7 @@ section
 }
 .card:hover .card_image::after
 {
-	background: rgba(69, 43, 120, 0.8);
+	background: rgba(0, 175, 250, 0.2);
 }
 .card-body
 {
@@ -798,7 +798,7 @@ section
 }
 .card:hover .card-title
 {
-	color: #452b78;
+	color: #00AFFA;
 }
 .card-text
 {
@@ -812,7 +812,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 600;
-	color: #452b78;
+	color: #00AFFA;
 	text-transform: uppercase;
 }
 
@@ -832,7 +832,7 @@ section
 }
 .footer_logo a
 {
-	color: #452b78;
+	color: #00AFFA;
 	line-height: 1;
 }
 .footer_intro p
@@ -872,6 +872,10 @@ section
 	font-weight: 500;
 	color: #cacaca;
 	margin-top: 65px;
+}
+.footer_cr a
+{
+	color: #cacaca;
 }
 .footer_cr_2
 {
