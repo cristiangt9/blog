@@ -20,34 +20,12 @@
 
 
 		<!-- Navigation -->
-		<nav class="main_nav justify-self-end text-right">
-			<ul>
-				<li><a href="{{ route('home')}}">Inicio</a></li>
-				<li class="active"><a href="#">Sobre mí</a></li>
-				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li><a href="{{ route('blog')}}">Blog</a></li>
-				<li><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
+		@include('partials-rango.nav')
+
 	@include('partials-rango.header-home')
 
 	<!-- Menu -->
-
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="{{ route('home')}}">Home</a></li>
-				<li class="menu_mm active"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li class="menu_mm"><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li class="menu_mm"><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li class="menu_mm"><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li class="menu_mm"><a href="{{ route('blog')}}">Blog</a></li>
-				<li class="menu_mm"><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
-		</div>
-	</div>
+	@include('partials-rango.menu-home')
 
 	<!-- Home -->
 
@@ -143,7 +121,7 @@
 										<div class="person_name">Aprendizaje continuo</div>
 										<div class="person_title">...</div>
 								</div>
-								<p>Todos sabemos que cada día se aprenden algo nuevo, pero es mi objetivo tomar dicho aprendizaje y canalizarlo para convertime en un mejor profesional y desechar todo aquello que limita en mi desarrollo . rrrrr rrrrrrrrr rrrrrr rrrr rrrr rrrrrr.</p>
+								<p>Todos sabemos que cada día se aprenden algo nuevo, pero es mi objetivo es tomar dicho aprendizaje y canalizarlo para convertime en un mejor profesional y tener la capacidad de desechar todo aquello que limita en mi desarrollo integral.</p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
@@ -156,7 +134,7 @@
 										<div class="person_name">Experiencia</div>
 										<div class="person_title">...</div>
 								</div>
-								<p>Complementar mi enseñanza académica con la tan valorada experiencia profesional que me permita crecer profesionalmente y aplicar mejor mis conocimientos. rrrrrrrrrrrr rrrrrrrrrrrr rrrrrrrrrrrrrrr rrrrrrrrrrrrr rrrrrrrrrrrrrr rrrrrrrrrrrr rrrrrrr. </p>
+								<p>Darle suficiente importacia a complementar mi enseñanza académica con la tan valorada experiencia profesional que me permita crecer profesionalmente y aplicar de mejor manera mis conocimientos creando cada vez un mejor resultado en menos tiempo. </p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
@@ -169,7 +147,7 @@
 										<div class="person_name">Confianza</div>
 										<div class="person_title">...</div>
 									</div>
-								<p>Desempeñar y desarrollar todas mis capacidades, consiguiendo un excelente resultado en la labor asignada, adquiriendo a través de la confianza en mi depositada, una experiencia invaluables, con la cual conseguir dar un paso importante en mi superación personal.</p>
+								<p>Desempeñar y desarrollar todas mis capacidades, consiguiendo un excelente resultado en la labor asignada, adquiriendo a través de la confianza en mi depositada, ser una profesional de confianza, con la cual conseguir dar un paso importante en mi superación personal.</p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">
@@ -179,10 +157,10 @@
 							<!-- Vertical Slider Item -->
 							<div class="v_slider_item">
 									<div class="person_meta">
-										<div class="person_name">Michael Smith</div>
-										<div class="person_title">Manager</div>
+										<div class="person_name">Nuevos Retos</div>
+										<div class="person_title">...</div>
 									</div>
-								<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pelle ntesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mattis effic iturut. Etiam nec odio vestibulum est mattis effic iturut magna. </p>
+								<p>Tener siempre un nuevo reto en mis objetivos, el cual me exija terminar con los objetivos que ya tengo y potencie mi capacidad de adaptación y superación. Si no hay retos no ha vida. </p>
 								<div class="person d-flex flex-row">
 									<div class="person_image">
 										<img src="images/person_1.png" alt="">

@@ -25,34 +25,12 @@
 
 
 		<!-- Navigation -->
-		<nav class="main_nav justify-self-end text-right">
-			<ul>
-				<li><a href="{{ route('home')}}">Inicio</a></li>
-				<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li class="active"><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li><a href="{{ route('blog')}}">Blog</a></li>
-				<li><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
+		@include('partials-rango.nav')
+
 	@include('partials-rango.header-home')
 
 	<!-- Menu -->
-
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="{{ route('home')}}">Home</a></li>
-				<li class="menu_mm"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li class="menu_mm"><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li class="menu_mm"><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li class="menu_mm active"><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li class="menu_mm"><a href="{{ route('blog')}}">Blog</a></li>
-				<li class="menu_mm"><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
-		</div>
-	</div>
+	@include('partials-rango.menu-home')
 
 	<!-- Home -->
 
@@ -83,11 +61,11 @@
 				<div class="col">
 					<div class="portfolio_categories button-group filters-button-group">
 						<ul>
-							<li class="portfolio_category active is-checked" data-filter="*">all</li>
-							<li class="portfolio_category" data-filter=".graphic_design">graphic design</li>
-							<li class="portfolio_category" data-filter=".branding">branding</li>
-							<li class="portfolio_category" data-filter=".web_design">web design</li>
-							<li class="portfolio_category" data-filter=".motion_graphic">motion graphic</li>
+							<li class="portfolio_category active is-checked" data-filter="*">Todos</li>
+							<li class="portfolio_category" data-filter=".disen_grafico">Diseño Gráfico</li>
+							<li class="portfolio_category" data-filter=".disen_web">Diseño Web</li>
+							<li class="portfolio_category" data-filter=".desar_web">Desarrollo Web</li>
+							<li class="portfolio_category" data-filter=".aplicaciones">Aplicaciones</li>
 						</ul>
 					</div>
 				</div>
@@ -100,41 +78,41 @@
 					<div class="portfolio_items product-grid">
 
 						<!-- Portfolio Item -->
-						<div class="card branding">
+						<div class="card disen_web">
 							<div class="card_image">
 								<img class="card-img-top" src="{{ asset('rango/images/portfolio_1.jpg')}}" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
-								<div class="card-header">branding</div>
+								<div class="card-header">Diseño Web</div>
 								<div class="card-title">3D Project for inhouse</div>
 								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+								<div class="card-link"><a href="#">read more</a></div>
 							</div>
 						</div>
 
 						<!-- Portfolio Item -->
-						<div class="card 3d_generated">
+						<div class="card disen_grafico">
 							<div class="card_image">
 								<img class="card-img-top" src="{{ asset('rango/images/portfolio_2.jpg')}}" alt="image by https://unsplash.com/@anthonydelanoix">
 							</div>
 							
 							<div class="card-body">
-								<div class="card-header">3d generated</div>
-								<div class="card-title">Identity branding for company</div>
+								<div class="card-header">Diseño Gráfico</div>
+								<div class="card-title">Flyer para la Shawarmeria</div>
 								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+								<div class="card-link"><a href="{{route('shawarmeria')}}">read more</a></div>
 							</div>
 						</div>
 
 						<!-- Portfolio Item -->
-						<div class="card motion_graphic">
+						<div class="card aplicaciones">
 							<div class="card_image">
 								<img class="card-img-top" src="{{ asset('rango/images/portfolio_3.jpg')}}" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
-								<div class="card-header">motion graphic</div>
+								<div class="card-header">Aplicaciones</div>
 								<div class="card-title">3D Project for inhouse</div>
 								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
 								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
@@ -142,13 +120,13 @@
 						</div>
 
 						<!-- Portfolio Item -->
-						<div class="card graphic_design">
+						<div class="card disen_grafico">
 							<div class="card_image">
 								<img class="card-img-top" src="{{ asset('rango/images/portfolio_4.jpg')}}" alt="image by https://unsplash.com/@anthonydelanoix">
 							</div>
 							
 							<div class="card-body">
-								<div class="card-header">graphic design</div>
+								<div class="card-header">Diseño Gráfico</div>
 								<div class="card-title">Identity branding for company</div>
 								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
 								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
@@ -156,13 +134,13 @@
 						</div>
 
 						<!-- Portfolio Item -->
-						<div class="card web_design">
+						<div class="card desar_web">
 							<div class="card_image">
 								<img class="card-img-top" src="{{ asset('rango/images/portfolio_5.jpg')}}" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
-								<div class="card-header">web design</div>
+								<div class="card-header">Desarrollo Web</div>
 								<div class="card-title">3D Project for inhouse</div>
 								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
 								<div class="card-link"><a href="portfolio_item.html">read more</a></div>

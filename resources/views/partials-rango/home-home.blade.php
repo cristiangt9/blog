@@ -11,26 +11,26 @@
 
 				<!-- Slider Item -->
 				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>by</span>
+					<span>Esta web contiene</span>
 					<span></span>
-					<span>GO!</span>
-					<span>Get your freebie template now!</span>
+					<span><img src="{{ asset('rango/images/html5.png')}}" alt=""></span>
+					<span>HTML 5</span>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>by</span>
-					<span><img src="{{ asset('rango/images/colorlib.png')}}" alt=""></span>
-					<span>GO!</span>
-					<span>Get your freebie template now!</span>
+					<span>Esta web contiene</span>
+					<span></span>
+					<span><img src="{{ asset('rango/images/css3.png')}}" alt=""></span>
+					<span>CSS 3</span>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="owl-item hero_slider_item item_1 d-flex flex-column align-items-center justify-content-center">
-					<span>by</span>
-					<span><img src="{{ asset('rango/images/colorlib.png')}}" alt=""></span>
-					<span>GO!</span>
-					<span>Get your freebie template now!</span>
+					<span>Esta web contiene</span>
+					<span></span>
+					<span><img src="{{ asset('rango/images/laravel5.png')}}" alt=""></span>
+					<span>Laravel 5</span>
 				</div>
 
 			</div>

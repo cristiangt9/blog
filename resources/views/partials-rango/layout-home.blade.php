@@ -18,16 +18,8 @@
 
 
 		<!-- Navigation -->
-		<nav class="main_nav justify-self-end text-right">
-			<ul>
-				<li class="active"><a href="#">Inicio</a></li>
-				<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li><a href="{{ route('blog')}}">Blog</a></li>
-				<li><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
+		@include('partials-rango.nav')
+
 	@include('partials-rango.header-home')
 	<!-- Menu -->
 	@include('partials-rango.menu-home')
@@ -42,9 +34,7 @@
 	<!-- Features -->
 	@include('partials-rango.features-home')
 	<!-- Call to action -->
-	@include('partials-rango.call-home')
 	<!-- Text Line -->
-	@include('partials-rango.text-home')
 	<!-- Newsletter -->
 	@include('partials-rango.newsletter-home')
 	<!--Content-->

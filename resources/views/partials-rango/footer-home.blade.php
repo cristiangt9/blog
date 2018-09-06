@@ -44,18 +44,18 @@
 					<div class="footer_col">
 						<div class="footer_col_title">Servicios</div>
 						<ul>
-							<li><a href="#">Diseño Grafico</a></li>
-							<li><a href="#">Diseño web</a></li>
-							<li><a href="#">SEO</a></li>
+							<li><a href="{{route('servicios')}}">Diseño Grafico</a></li>
+							<li><a href="{{route('servicios')}}">Diseño web</a></li>
+							<li><a href="{{route('servicios')}}">SEO</a></li>
 						</ul>
 					</div>
 					
 					<div class="footer_col">
 						<div class="footer_col_title">Otros</div>
 						<ul>
-							<li><a href="#">Social media</a></li>
-							<li><a href="#">Contenido web</a></li>
-							<li><a href="#">Big Data</a></li>
+							<li><a href="{{route('servicios')}}">Social media</a></li>
+							<li><a href="{{route('servicios')}}">Contenido web</a></li>
+							<li><a href="{{route('servicios')}}">Big Data</a></li>
 						</ul>
 					</div>
 
@@ -85,9 +85,9 @@
 					<div class="footer_col">
 						<div class="footer_col_title">Sobre mí</div>
 						<ul>
-							<li><a href="#">Mi equipo</a></li>
-							<li><a href="#">Historia</a></li>
-							<li><a href="#">Compañia</a></li>
+							<li><a href="{{route('sobre-mi')}}">Mis Objetivos</a></li>
+							<li><a href="{{route('sobre-mi')}}">Historia</a></li>
+							<li><a href="{{route('sobre-mi')}}">Personas</a></li>
 							<li><a href="{{ route('dashboard')}}">Soporte</a></li>
 						</ul>
 					</div>
@@ -100,7 +100,7 @@
 					<div class="footer_col">
 						<div class="footer_col_title">Web</div>
 						<ul>
-							<li><a href="#">Blog</a></li>
+							<li><a href="{{route('blog')}}">Blog</a></li>
 							<li><a href="#">Foros</a></li>
 							<li><a href="#">Q&A</a></li>
 							<li><a href="#">Mapa del sitio</a></li>

@@ -41,4 +41,8 @@ class PagesController extends Controller
     {
     	return view('contact-rango');
     }
+    public function shawarmeria()
+    {
+        return view('portfolio.shawarmeria_1');
+    }
 }

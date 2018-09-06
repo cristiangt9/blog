@@ -26,32 +26,12 @@
 
 
 		<!-- Navigation -->
-		<nav class="main_nav justify-self-end text-right">
-			<ul>
-				<li><a href="{{ route('home')}}">Inicio</a></li>
-				<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li><a href="{{ route('blog')}}">Blog</a></li>
-				<li class="active"><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
+		@include('partials-rango.nav')
+
 	@include('partials-rango.header-home')
 
 	<!-- Menu -->
-
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-				<li class="menu_mm"><a href="{{ route('home')}}">Inicio</a></li>
-				<li class="menu_mm"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li class="menu_mm"><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li class="menu_mm"><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li class="menu_mm"><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li class="menu_mm"><a href="{{ route('blog')}}">Blog</a></li>
-				<li class="menu_mm active"><a href="{{ route('contactame')}}">Contactame</a></li>
-		</div>
-	</div>
+	@include('partials-rango.menu-home')
 
 	<!-- Home -->
 

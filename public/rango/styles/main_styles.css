@@ -577,8 +577,8 @@ section
 {
 	font-size: 24px;
 	line-height: 1.5;
-	font-weight: 500;
-	color: #0000FB;
+	font-weight: 600;
+	color: #FBE4D5;
 }
 .item_1 span:first-child
 {
@@ -591,12 +591,7 @@ section
 }
 .item_1 span:nth-child(3)
 {
-	font-size: 236px;
-	font-weight: 800;
-	line-height: 1;
-	letter-spacing: 0.1em;
-	margin-bottom: 14px;
-	margin-right: -0.1em;
+	width: 30%;
 }
 .item_1 span:nth-child(4)
 {
@@ -656,7 +651,7 @@ section
 .hero_slider_nav div i
 {
 	font-size: 18px;
-	color: #00AFFA;
+	color: #FFF;
 }
 }
 .hero_slider_nav div:hover::before
@@ -1176,8 +1171,8 @@ section
 .device_image_container
 {
 	width: calc(50vw - 45px);
-	height: 100%;
-	padding-top: 195px;
+	height: 85%;
+	padding-top: 0px;
 }
 .device_image_container img
 {
@@ -1190,7 +1185,7 @@ section
 	left: 21px;
 	width: 50vw;
 	height: 511px;
-	background: #00AFFA;
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
 	z-index: -1;
 }
 
@@ -1603,9 +1598,15 @@ section
 
 .cta_2
 {
-	padding-top: 82px;
+	padding-top: 50px;
 	padding-bottom: 78px;
-	background: #00AFFA;
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+}
+.cta_2 h1{
+	text-align: center;
+	padding-bottom: 32px;
+	color: #FFF;
+
 }
 .cta_2_background
 {
@@ -1658,6 +1659,21 @@ section
 .cta_2_button:hover a
 {
 	color: #00AFFA;
+}
+
+.cta_2_container p{
+	text-align: center;
+	color: #FFF;
+	font-weight: 600;
+	padding-top: 4px;
+	font-size: 24px;
+
+}
+.habilidades{
+	width: 65%;
+	display:block;
+	margin:auto;
+
 }
 /*********************************
 9.2 Image Boxes

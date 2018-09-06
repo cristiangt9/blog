@@ -19,6 +19,12 @@ Route::get('/portafolio', 'PagesController@portfolio')->name('portafolio');
 Route::get('/blog', 'PagesController@blog')->name('blog');
 Route::get('/contactame', 'PagesController@contact')->name('contactame');
 
+/*portafolio*/
+Route::group(['prefix' => 'portafolio'], function(){
+	Route::get('Sharameria_1', 'PagesController@shawarmeria')->name('shawarmeria');
+
+});
+
 Route::get('/about.html', function () {return view('about');})->name('about');
 Route::get('/archive.html', function () {return view('archive');})->name('archive');
 Route::get('/contact.html', function () {return view('contact');})->name('contact');

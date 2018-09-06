@@ -13,6 +13,6 @@ class TagsController extends Controller
 
     	$title = "<h1>Etiqueta: <span class='read-more'>".$tag->name."</span></h1>";
 
-    	return view('home1',compact('posts','title'));
+    	return view('blog',compact('posts','title'));
     }
 }

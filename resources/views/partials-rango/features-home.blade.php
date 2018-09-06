@@ -4,7 +4,7 @@
 				<div class="col text-center">
 
 					<div class="section_title">
-						<h1>Modern features</h1>
+						<h1>Características modernas</h1>
 					</div>
 
 				</div>
@@ -16,13 +16,13 @@
 					<!-- Features Item-->
 					<div class="features_item">
 						<h2>Responsive</h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pel lentesque sit am et tellus.</p>
+						<p>Hacemos que tu web se vea como deseas en cada pantalla. La navegación web ya no se limita a un equipo de escritorio, ahora existen diferentes dispositivos. Tu sitio se debe adaptar.</p>
 					</div>
 
 					<!-- Features Item-->
 					<div class="features_item">
 						<h2>Clean code</h2>
-						<p>Nec odio vestibulum est mattis effic iturut magna. Pel lentesque sit am et tellus bla ndit.</p>
+						<p>Código limpio, no repetitivo y bien estructurado para que cuando desees aportar algo a tu web no sea una tarea del otro mundo.</p>
 					</div>
 
 				</div>
@@ -32,7 +32,7 @@
 						<img src="{{ asset('rango/images/features.png')}}" alt="">
 					</div>
 					<div class="button features_button trans_200">
-						<a href="#" class="trans_200">discover more</a>
+						<a href="{{route('servicios')}}" class="trans_200">Descubre más</a>
 					</div>
 				</div>
 
@@ -40,14 +40,14 @@
 					
 					<!-- Features Item-->
 					<div class="features_item">
-						<h2>Retina ready</h2>
-						<p>Nec odio vestibulum est mattis effic iturut magna. Pel lentesque sit am et tellus bla ndit.</p>
+						<h2>SEO</h2>
+						<p>tu web siempre sera entendida de manera clara por los buscadores y esto hara que sea una de las primeras en las listas de busqueda.</p>
 					</div>
 
 					<!-- Features Item-->
 					<div class="features_item">
-						<h2>Great team</h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pel lentesque sit am et tellus.</p>
+						<h2>Diseño Moderno</h2>
+						<p>En la red mantenerte actual lo es todo, y si tu sitio no quiere demostrar ser obsoleto debes mantener siempre un diseño moderno. Aun cuando quieras aparentar vejes.</p>
 					</div>
 
 					<div class="button features_button_2 trans_200">

@@ -13,6 +13,6 @@ class CategoriesController extends Controller
 
     	$title = "<h1>Categoria: <span class='read-more'>".$category->name."</span></h1>";
 
-    	return view('home1',compact('posts','title'));
+    	return view('blog',compact('posts','title'));
     }
 }

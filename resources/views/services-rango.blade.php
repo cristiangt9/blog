@@ -3,7 +3,7 @@
 <head>
 <title>CG - Servicios</title>
 @include('partials-rango.head-home')
-<link rel="stylesheet" type="text/css" href="styles/services_responsive.css">
+<link rel="stylesheet" type="text/css" href="{{asset('rango/styles/services_responsive.css')}}">
 </head>
 
 <body>
@@ -18,16 +18,8 @@
 		@include('partials-rango.logo')
 
 		<!-- Navigation -->
-		<nav class="main_nav justify-self-end text-right">
-			<ul>
-				<li><a href="{{ route('home')}}">Inicio</a></li>
-				<li><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li class="active"><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li><a href="{{ route('blog')}}">Blog</a></li>
-				<li><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
+		@include('partials-rango.nav')
+
 		@include('partials-rango.header-home')
 
 		<!-- Hamburger -->
@@ -38,21 +30,7 @@
 	</header>
 
 	<!-- Menu -->
-
-	<div class="menu_container">
-		<div class="menu menu_mm text-right">
-			<div class="menu_close"><i class="far fa-times-circle trans_200"></i></div>
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="{{ route('home')}}">Home</a></li>
-				<li class="menu_mm"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
-				<li class="menu_mm"><a href="{{ route('habilidades')}}">Habilidades</a></li>
-				<li class="menu_mm active"><a href="{{ route('servicios')}}">Servicios</a></li>
-				<li class="menu_mm"><a href="{{ route('portafolio')}}">Portafolio</a></li>
-				<li class="menu_mm"><a href="{{ route('blog')}}">Blog</a></li>
-				<li class="menu_mm"><a href="{{ route('contactame')}}">Contactame</a></li>
-			</ul>
-		</div>
-	</div>
+	@include('partials-rango.menu-home')
 
 	<!-- Home -->
 
@@ -64,7 +42,7 @@
 		<div class="home_title">
 			<h2>Servicios</h2>
 			<div class="next_section_scroll_about">
-				<div class="next_section_about nav_links" data-scroll-to=".icon_boxes">
+				<div class="next_section_about nav_links" data-scroll-to=".services_boxes">
 					<i class="fas fa-chevron-down trans_200"></i>
 					<i class="fas fa-chevron-down trans_200"></i>
 				</div>
@@ -83,30 +61,15 @@
 
 					<!-- Service Item -->
 					<div class="services_item">
-						<h2><a href="#">Great team</a></h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit mattis effic iturut magna.</p>
+						<h2><a href="#services_boxes" id="ver_agilece_carga">Agilice la carga</a></h2>
+						<div id="agilece_carga" style="display:none"><p>En la red mundial, llamada Internet, el tiempo es un recurso muy limitado y si nuestra aplicación web demanda mucho este recurso, podría hacer con que los usuarios abandonen nuestra aplicación en búsqueda de otra más rápida. Permíteme agilizar la carga de tu aplicación web.</p></div>
 					</div>
 
 					<!-- Service Item -->
 					<div class="services_item">
-						<h2><a href="#">Modern design</a></h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit mattis effic iturut magna.</p>
-					</div>
-
-				</div>
-
-				<div class="col-lg-4 services_col">
-
-					<!-- Service Item -->
-					<div class="services_item">
-						<h2><a href="#">Online marketing</a></h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit mattis effic iturut magna.</p>
-					</div>
-
-					<!-- Service Item -->
-					<div class="services_item">
-						<h2><a href="#">Easy to use</a></h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit mattis effic iturut magna.</p>
+						<h2><a href="#services_boxes" id="ver_administracion">Administración</a></h2>
+						<div id="administracion" style="display:none"><p>Una aplicación web desactualizada está destinada al fracaso, si tu tiempo o conocimientos no te lo permiten, déjame ayudarte en la administración y en la actualización de tu aplicación. Y no te arriesgues a perder usuarios por quedarte en el pasado.</p>
+						</div>
 					</div>
 
 				</div>
@@ -115,14 +78,34 @@
 
 					<!-- Service Item -->
 					<div class="services_item">
-						<h2><a href="#">Retina ready</a></h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit mattis effic iturut magna.</p>
+						<h2><a href="#services_boxes" id="ver_eva_riesgo">Evaluación de Riesgo</a></h2>
+						<div id="eva_riesgo" style="display:none"><p>¿Qué bueno es escuchar: “El futuro ya está aquí”? Esta frase te hace pensar que las nuevas tecnologías van a hacer nuestra vida mejor y más fácil, pero no pensamos en las amenazas cibernéticas. Permíteme evaluar los riesgos de tu aplicación es vulnerable para reducirlos o eliminarlos.</p>
+						</div>
 					</div>
 
 					<!-- Service Item -->
 					<div class="services_item">
-						<h2><a href="#">Responsive</a></h2>
-						<p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit mattis effic iturut magna.</p>
+						<h2><a href="#services_item" id="ver_dise_grafico">Diseño Gráfico</a></h2>
+						<div id="dise_grafico" style="display:none"><p>Tanto en la red como fuera de ella, la atención de una persona se logra inicialmente mediante la parte gráfica. Atrae a tu público de manera gráfica y así poder mostrar todo el potencial de tu marca.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col-lg-4 services_col">
+
+					<!-- Service Item -->
+					<div class="services_item">
+						<h2><a href="#services_item" id="ver_social">Social Media</a></h2>
+						<div id="social" style="display: none"><p>Tener tu página web es un gran trabajo pero para que rinda los frutos que deseamos es necesario que muestres clientes la visiten e interactúen con ella. Y las redes sociales vienen a ser una herramienta de difusión súper potente que no podemos desechar. Hagamos de tu página la más comentada.</p>
+						</div>
+					</div>
+
+					<!-- Service Item -->
+					<div class="services_item">
+						<h2><a href="#services_item" id="ver_seo">SEO</a></h2>
+						<div id="seo" style="display: none"><p>Permite que los buscadores te encuentren. Cuando Google muestra el resultado de una búsqueda, muestra las pagina de manera ordenada según varios factores que el entiende y cree son los mejores para responder esta búsqueda. Hablemos su mismo idioma y pongamos tu página entre las primeras de la lista.</p>
+						</div>
 					</div>
 
 				</div>
@@ -178,31 +161,6 @@
 
 	</div>
 
-	<!-- Call to action 2 -->
-
-	<div class="cta_2">
-		<div class="cta_2_background" style="background-image:url(rango/images/cta_2.png)"></div>
-		<div class="container">
-			<div class="row">
-				
-				<div class="col-lg-9">
-					<div class="cta_2_content">
-						<h1>What are you waiting for?</h1>
-						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae enim enim. </span>
-					</div>
-				</div>
-
-				<div class="col-lg-3">
-					<div class="cta_2_button_container">
-						<div class="button cta_2_button">
-							<a href="#">discover more</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
 
 	<!-- Image Boxes -->
 
@@ -260,6 +218,38 @@
 </div>
 	<!-- Scripts -->
 	@include('partials-rango.scripts')
+	<script>
+		$(document).ready(function(){ 
+		   $('#ver_agilece_carga').on('click',function(){
+		      $('#agilece_carga').toggle('slow');
+		   });
+		});
+		$(document).ready(function(){ 
+		   $('#ver_administracion').on('click',function(){
+		      $('#administracion').toggle('slow');
+		   });
+		});
+		$(document).ready(function(){ 
+		   $('#ver_eva_riesgo').on('click',function(){
+		      $('#eva_riesgo').toggle('slow');
+		   });
+		});
+		$(document).ready(function(){ 
+		   $('#ver_dise_grafico').on('click',function(){
+		      $('#dise_grafico').toggle('slow');
+		   });
+		});
+		$(document).ready(function(){ 
+		   $('#ver_social').on('click',function(){
+		      $('#social').toggle('slow');
+		   });
+		});
+		$(document).ready(function(){ 
+		   $('#ver_seo').on('click',function(){
+		      $('#seo').toggle('slow');
+		   });
+		});
+	</script>
 </body>
 
 </html>
