@@ -18,18 +18,21 @@ Route::get('/servicios', 'PagesController@services')->name('servicios');
 Route::get('/portafolio', 'PagesController@portfolio')->name('portafolio');
 Route::get('/blog', 'PagesController@blog')->name('blog');
 Route::get('/contactame', 'PagesController@contact')->name('contactame');
-
+Route::get('/mapa-del-sitio', 'PagesController@webmap')->name('mapaweb');
 /*portafolio*/
 Route::group(['prefix' => 'portafolio'], function(){
 	Route::get('Sharameria_1', 'PagesController@shawarmeria')->name('shawarmeria');
 
 });
+/*blog */
+Route::get('blog/{post}', 'PagesController@show_blog')->name('blog.show');
+
 
 Route::get('/about.html', function () {return view('about');})->name('about');
 Route::get('/archive.html', function () {return view('archive');})->name('archive');
 Route::get('/contact.html', function () {return view('contact');})->name('contact');
 
-Route::get('blog/{post}','PostsController@show')->name('posts.show');
+// Route::get('blog/{post}','PostsController@show')->name('posts.show');
 Route::get('categorias/{category}','CategoriesController@show')->name('categories.show');
 Route::get('etiquetas/{tag}','tagsController@show')->name('tags.show');
 

@@ -331,13 +331,15 @@ section
 	left: 0;
 	width: 100%;
 	height: 128px;
-	background: rgba(27, 11, 51, 0.52);
+	/*background: rgba(27, 11, 51, 0.52);*/
 	z-index: 10;
 }
 .header.scrolled
 {
 	height: 80px;
-	background: rgba(27, 11, 51, 0.92);
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+	/*rgba(0, 128, 255, 0.92);*/
+	/*background: rgba(27, 11, 51, 0.92);*/
 }
 
 /*********************************
@@ -349,18 +351,27 @@ section
 	padding-left: 57px;
 	flex-basis: 50%;
 }
+.foot.logo 
+{
+	padding-left: 30px;
+}
 .logo a
 {
-	font-size: 36px;
+	font-size: 24px;
 	font-weight: 500;
-	color: #fefefe;
+	color: #00AFFA;
+	/*color: #fefefe;*/
 	letter-spacing: 0.1em;
 	line-height: 128px;
+}
+.scrolled .logo a
+{
+	color: #fefefe;
 }
 .logo a span
 {
 	font-weight: 800;
-	color: #ff6b09;
+	color: #FF8100;
 	text-transform: uppercase;
 }
 
@@ -375,7 +386,7 @@ section
 .main_nav ul
 {
 	display: inline-block;
-	margin-right: 100px;
+	margin-right: 0px;
 	-webkit-transform: translateY(-4px);
 	-moz-transform: translateY(-4px);
 	-ms-transform: translateY(-4px);
@@ -394,16 +405,33 @@ section
 .main_nav ul li a
 {
 	display: block;
-	font-size: 15px;
+	font-size: 17px;
 	font-weight: 400;
 	line-height: 40.51px;
+	color: #00AEFF;/*#FFFFFF;*/
+	position: relative;
+	border-bottom: 3px solid transparent;
+
+}
+
+.main_nav ul li a:focus{
+	border-bottom: 3px solid #52d3aa;
+}
+.main_nav ul li  a:hover{
+	border-bottom: 3px solid #52d3aa;
+
+}
+
+.scrolled .main_nav ul li a
+{
+
 	color: #FFFFFF;
 }
 .main_nav ul li.active a
 {
 	font-weight: 700;
+	border-bottom: 3px solid #52d3aa;
 }
-
 /*********************************
 3.1.3 Search
 *********************************/
@@ -429,7 +457,7 @@ section
 }
 .search_button:active
 {
-	background: #301b54;
+	background: #00AFFA;
 }
 .search_form
 {
@@ -452,7 +480,7 @@ section
 	width: 100%;
 	height: 100%;
 	background: #FFFFFF;
-	color: #1b0b32;
+	color: #00AFFA;
 	padding-left: 20px;
 	outline: none !important;
 	border: none !important;
@@ -475,7 +503,13 @@ section
 {
 	font-size: 24px;
 	padding: 10px;
-	color: #FFFFFF;
+	color: #00AFFA;
+}
+.scrolled .hamburger_container i
+{
+	font-size: 24px;
+	padding: 10px;
+	color: #FFF;
 }
 .hamburger_container:hover i
 {
@@ -502,7 +536,7 @@ section
 {
 	font-size: 30px;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: #00AFFA;
 	margin-bottom: 15px;
 }
 
@@ -652,6 +686,22 @@ section
 	border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
+.card-tag
+{
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+.card-tag a
+{
+	color: #909090;
+	font-size: 14px;
+}
+.card-tag a:hover
+{
+	color: #00AFFA;
+}
 .card-body
 {
 	padding-top: 44px;
@@ -669,7 +719,7 @@ section
 	font-size: 12px;
 	font-weight: 400;
 	text-transform: uppercase;
-	color: #452b78;
+	color: #00AFFA;
 }
 .card-title
 {
@@ -682,30 +732,42 @@ section
 }
 .card-title a:hover
 {
-	color: #452b78;
+	color: #00AFFA;
 }
+
+
+/*********************************
+5.1 Blog pages
+*********************************/
 .blog_pages
 {
-	margin-bottom: 120px;
+	text-align: center;
 }
 .blog_pages ul li
 {
 	display: inline-block;
+	width: 25px;
+	height: 25px;
 	margin-right: 20px;
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+
 }
 .blog_pages ul li a
 {
+
+	margin: auto;
 	font-size: 15px;
 	font-weight: 600;
-	color: #909090;
+	color: #FFF;
+	padding: 8px 8px 8px 8px;
 }
 .blog_pages ul li a:hover
 {
-	color: #452b78;
+	color: #ff6b09;
 }
-.blog_pages ul li.active a
+.blog_pages ul li a.active
 {
-	color: #452b78;
+	color: #ff6b09;
 }
 
 /*********************************
@@ -852,7 +914,7 @@ section
 }
 .sidebar_categories ul li:hover::before
 {
-	background: #452b78;
+	background: #00AFFA;
 }
 
 /*********************************
@@ -905,7 +967,7 @@ section
 }
 .tag_item
 {
-	background: #452b78;
+	background: #00AFFA;
 	height: 39px;
 	margin-right: 13px;
 	margin-bottom: 16px;
@@ -940,14 +1002,81 @@ section
 }
 
 /*********************************
-7. Footer
+11. Newsletter
+*********************************/
+
+.newsletter
+{
+	width: 100%;
+	background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
+}
+.newsletter_content
+{
+	padding-top: 110px;
+	padding-bottom: 141px;
+}
+.newsletter_title
+{
+
+}
+.newsletter_title h1
+{
+	color: #FFFFFF;
+	margin-bottom: 13px;
+}
+.newsletter_title span
+{
+	font-size: 16px;
+	font-weight: 500;
+	color: #FFFFFF;
+}
+.newsletter_form_container
+{
+	text-align: left;
+	margin-top: 77px;
+}
+.newsletter_email
+{
+	height: 53px;
+	background: #00AFFA;/*#452b78;*/
+	border: solid 2px #00AFFA;
+	padding-left: 30px;
+	width: calc(100% - 174px - 26px);
+	margin-right: 22px;
+	color: #FFFFFF;
+
+}
+.newsletter_email:focus
+{
+	outline: none;
+	border: none;
+}
+.newsletter_submit_button
+{
+	cursor: pointer;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 700;
+}
+.newsletter_submit_button:hover
+{
+	background: #00AFFA;
+}
+.newsletter_submit_button:focus
+{
+	outline: none;
+	border: none;
+}
+
+/*********************************
+12. Footer
 *********************************/
 
 .footer
 {
 	padding-top: 99px;
 	padding-bottom: 82px;
-	border-top: solid 1px #dcdcdc;
 }
 .footer_logo
 {
@@ -962,6 +1091,7 @@ section
 .footer_intro p
 {
 	margin-bottom: 0px;
+	text-align: justify;
 }
 .footer_social
 {
@@ -988,7 +1118,7 @@ section
 }
 .footer_social ul li a:hover i
 {
-	color: #1b0d37;
+	color: #00AFFA;
 }
 .footer_cr
 {
@@ -996,6 +1126,10 @@ section
 	font-weight: 500;
 	color: #cacaca;
 	margin-top: 65px;
+}
+.footer_cr a
+{
+	color: #cacaca;
 }
 .footer_cr_2
 {
@@ -1037,5 +1171,8 @@ section
 }
 .footer_col ul li a:hover
 {
-	color: #28262d;
+	color: #00AFFA;
+}
+.footer_dev{
+	color: #00AFFA;
 }

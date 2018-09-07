@@ -10,8 +10,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
 <link href="{{ asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
 <link href="{{ asset('rango/plugins/colorbox/colorbox.css" rel="stylesheet"')}} type="text/css">
-<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_post_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_post_responsive.css')}}">
 </head>
 
 <body>
@@ -35,11 +35,11 @@
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(rango/images/blog_background.png)"></div>
+			<div class="home_background prlx" style="background-image:url(../rango/images/blog_background.png)"></div>
 		</div>
 		
 		<div class="home_title">
-			<h2>Blog</h2>
+			<h2>{{ $post->title }}</h2>
 			<div class="next_section_scroll">
 				<div class="next_section nav_links" data-scroll-to=".blog">
 					<i class="fas fa-chevron-down trans_200"></i>
@@ -59,32 +59,92 @@
 				
 				<div class="col-lg-8">
 					
+					<!-- Blog Post -->
+
 					<div class="blog_container">
-						@if(isset($title))
-				            {!!$title!!}
-				        @endif
-						<div class="post_container" data-masonry='{ "itemSelector": ".card", "gutter": 30 }'>
-							@foreach($posts as $post)
-								<div class="card trans_200">
-									<img class="card-img-top" src="{{ asset('rango/images/blog_1.jpg')}}" alt="">
-									<div class="card-body">
-										<div class="card-header">{{ $post->published_at->format('M d')}} / {{ $post->user->name}}</div>
-										<div class="card-title"><a href="{{route('blog.show',$post)}}">{{ $post->title }}</a></div>
-										<div class="card-text">
-											{{ $post->excerpt}}
-										</div>
-										@foreach($post->tags as $posttag)
-											<div class="card-tag"><a href="#">#{{$posttag->name}} </a></div>
-										@endforeach
-									</div>
-								</div>
+
+						<!-- Image -->
+						<div class="blog_post_image">
+							<img src="{{ asset('rango/images/blog_post.jpg')}}" alt="https://unsplash.com/@heysupersimi">
+						</div>
+
+						<!-- Blog Post Body -->
+						<div class="blog_post_body">
+							<div class="blog_post_date">{{ $post->published_at->format('M d')}} / {{ $post->user->name}}</div>
+							<h2 class="blog_post_title">{{ $post->title }}</h2>
+							{!! $post->body !!}
+							@foreach($post->tags as $posttag)
+								<div class="card-tag"><a href="#">#{{$posttag->name}} </a></div>
 							@endforeach
 						</div>
+
+						<!-- Comments -->
+						<div class="blog_post_comments">
+							<div class="comments_title">Comments</div>
+							<ul class="comments_container">
+
+								<!-- Comment -->
+								<li class="comment">
+									<div class="comment_content clearfix">
+										<div class="comment_image"><img src="images/comment_1.jpg" alt=""></div>
+										<div class="comment_body">
+											<div class="comment_name">Michael Smith</div>
+											<div class="comment_date">27 oct 2017</div>
+											<p class="comment_text">Curabitur et elementum orci. Nam vitae laoreet quam. Vestibulum a erat quis nulla tempus mollis in eu orci. Nulla sed eleifend ex, ultrices convallis arcu. Pellentesque et enim non augue varius hendrerit</p>
+											<div class="comment_link">
+												<a href="#">reply</a>
+											</div>
+										</div>
+									</div>
+
+									<ul class="children">
+										<li class="comment">
+											<div class="comment_content clearfix">
+												<div class="comment_image"><img src="images/comment_2.jpg" alt=""></div>
+												<div class="comment_body">
+													<div class="comment_name">Michael Smith</div>
+													<div class="comment_date">27 oct 2017</div>
+													<p class="comment_text">Elementum orci. Nam vitae laoreet quam. Vestibulum a erat quis nulla tempus mollis in eu orci. Nulla sed eleifend ex, ultrices convallis arcu. Pellentesque et enim non augue varius hendrerit</p>
+													<div class="comment_link">
+														<a href="#">reply</a>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+
+							</ul>
+						</div>
+
+						<!-- Reply -->
+
+						<div class="reply">
+							
+							<div class="reply_title">Envíame un mensaje</div>
+							<div class="reply_form_container">
+								
+								<!-- Reply Form -->
+
+								<form id="reply_form" action="post">
+									<div>
+										<input id="reply_form_name" class="input_field reply_form_name" type="text" placeholder="Nombre" required="required" data-error="Name is required.">
+										<input id="reply_form_email" class="input_field reply_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+										<input id="reply_form_subject" class="input_field reply_form_subject" type="text" placeholder="Asunto" required="required" data-error="Subject is required.">
+										<textarea id="reply_form_message" class="text_field reply_form_message" name="message"  placeholder="Mensaje" rows="4" required data-error="Please, write us a message."></textarea>
+									</div>
+									<div>
+										<button id="reply_form_submit" type="submit" class="reply_submit_btn trans_300" value="Submit">
+											Enviar mensaje
+										</button>
+									</div>
+
+								</form>
+
+							</div>
+						</div>
 					</div>
-						
-					{{ $posts->links()}}
-
-
+					
 				</div>
 
 				<div class="col-lg-4">
@@ -97,7 +157,7 @@
 
 							<!-- Sidebar Search -->
 							<form id="sidebar_search_form" class="sidebar_search_form bez_1">
-								<input id="sidebar_search_input" type="search" class="sidebar_search_input bez_1" placeholder="Search">
+								<input id="sidebar_search_input" type="search" class="sidebar_search_input bez_1" placeholder="Buscar">
 								<button id="sidebar_search_button" type="submit" class="sidebar_search_button trans_300" value="Submit">
 									<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 										width="18px" height="18px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
@@ -219,9 +279,6 @@
 		</div>
 		
 	</div>
-
-	<!-- Newsletter -->
-	@include('partials-rango.newsletter-home')
 	<!-- Footer -->
 	@include('partials-rango.footer-home')
 
@@ -238,8 +295,7 @@
 <script src="{{ asset('rango/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
 <script src="{{ asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
 <script src="{{ asset('rango/plugins/easing/easing.js')}}"></script>
-<script src="{{ asset('rango/plugins/masonry/masonry.js')}}"></script>
-<script src="{{ asset('rango/js/blog_custom.js')}}"></script>
+<script src="{{ asset('rango/js/blog_post_custom.js')}}"></script>
 </body>
 
 </html>

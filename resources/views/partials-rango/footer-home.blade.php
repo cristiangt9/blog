@@ -103,7 +103,7 @@
 							<li><a href="{{route('blog')}}">Blog</a></li>
 							<li><a href="#">Foros</a></li>
 							<li><a href="#">Q&A</a></li>
-							<li><a href="#">Mapa del sitio</a></li>
+							<li><a href="{{ route('mapaweb')}}">Mapa del sitio</a></li>
 						</ul>
 					</div>
 

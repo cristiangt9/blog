@@ -5,8 +5,8 @@
 
 	<section class="content-header">
       <h1>
-        Todas las publicaciones
-        <small>Optional description</small>
+        Publicaciones
+        <small>Todas</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Inicio</a></li>
@@ -23,7 +23,7 @@
 
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
+              <h3 class="box-title">Listado de publicaciones</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -43,7 +43,7 @@
                		<th>{{$post->title}}</th>
                		<th>{{$post->excerpt}}</th>
                		<th>
-               			<a href="{{ route('posts.show', ['post' => $post->url] ) }}" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
+               			<a href="{{ route('blog.show', $post)}}" target="_blank" class="btn btn-xs btn-default"><i class="fa fa-eye"></i></a>
                			<a href="{{ route('posts.edit', ['post' => $post->url] ) }}" class="btn btn-xs btn-info"><i class="fa fa-pencil"></i></a>
                     <form style="display:inline" method="POST" action="{{ route('posts.delete', ['post' => $post->url] ) }}"> 
                       @csrf
