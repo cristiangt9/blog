@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CG - Shawameria</title>
+<title>CG - Nativos</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Cristian Gonzalez web's">
@@ -77,7 +77,7 @@
 				<!-- Slider Item -->
 				<div class="slider_item">
 					<!-- image by https://unsplash.com/@heysupersimi -->
-					<div class="slider_item_background" style="background-image: url(../rango/images/portafolio/slider_shawarma.png)"></div>
+					<div class="slider_item_background" style="background-image: url(../rango/images/portafolio/slider_aventura.png)"></div>
 				</div>
 
 				<!-- Slider Item -->
@@ -124,8 +124,8 @@
 				<div class="row">
 					
 					<div class="col-lg-4 portfolio_title_container">
-						<div class="portfolio_category">Diseño Gráfico</div>
-						<h2 class="portfolio_title">Flyer para la Shawarmeria</h2>
+						<div class="portfolio_category">Diseño Web</div>
+						<h2 class="portfolio_title">Flyer para Aventura</h2>
 					</div>
 
 				</div>
@@ -133,7 +133,7 @@
 				<div class="row">
 
 					<div class="col-lg-4 order-lg-1 order-2">
-						<p class="portfolio_text">Foodtruck de comida árabe. La Shawameria es un restaurante de comida rápida árabe ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un flyer para impulsar sus nuevos platos y aumentar la clientela por apertura.</p>
+						<p class="portfolio_text">Restaurante de día y bar de noche. Aventura es un local situado en la parte norte de ciudad, en el barrio de Carcelén industrial, el cual solicito la creación de un flyer que abarcara sus dos actividades.</p>
 					</div>
 
 					<div class="col-lg-4 order-lg-2 order-3">
@@ -160,7 +160,7 @@
 
 							<ul class="info_box_item">
 								<li class="info_box_title">Fecha de creación</li>
-								<li class="info_box_content">Febrero 2018</li>
+								<li class="info_box_content">Marzo 2018</li>
 							</ul>
 
 						</div>

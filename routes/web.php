@@ -19,11 +19,17 @@ Route::get('/portafolio', 'PagesController@portfolio')->name('portafolio');
 Route::get('/blog', 'PagesController@blog')->name('blog');
 Route::get('/contactame', 'PagesController@contact')->name('contactame');
 Route::get('/mapa-del-sitio', 'PagesController@webmap')->name('mapaweb');
+
 /*portafolio*/
 Route::group(['prefix' => 'portafolio'], function(){
-	Route::get('Sharameria_1', 'PagesController@shawarmeria')->name('shawarmeria');
-
+	Route::get('flayer-shawarmeria', 'PagesController@shawarmeria_1')->name('flayer_shawarmeria');
+	Route::get('menu-shawarmeria', 'PagesController@shawarmeria_2')->name('menu_shawarmeria');
+	Route::get('nativos', 'PagesController@nativos')->name('nativos');
+	Route::get('aventura', 'PagesController@aventura')->name('aventura');
+	Route::get('previfire', 'PagesController@previfire')->name('previfire');
+	Route::get('previfire_logo', 'PagesController@previfire_logo')->name('previfire_logo');
 });
+
 /*blog */
 Route::get('blog/{post}', 'PagesController@show_blog')->name('blog.show');
 

@@ -1721,6 +1721,23 @@ section
 	color: #00AFFA;
 }
 
+.card-tag
+{
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+.card-tag a
+{
+	color: #909090;
+	font-size: 14px;
+}
+.card-tag a:hover
+{
+	color: #00AFFA;
+}
+
 
 /*********************************
 10. Text Line

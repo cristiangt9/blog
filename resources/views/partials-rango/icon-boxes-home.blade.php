@@ -14,7 +14,7 @@
 
 					<!-- Icon Box Item -->
 					<div class="icon_box_item">
-						<h2>Metodología Agil</h2>
+						<h2>Metodología Ágil</h2>
 						<p>No esperes hasta que el producto este totalmente terminado para darte cuenta que no cumple tus expectativas. Recibe una actualización periódica del desarrollo,  para que puedas solicitar cambios inmediatos.</p>
 					</div>
 

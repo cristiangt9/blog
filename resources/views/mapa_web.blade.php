@@ -53,6 +53,7 @@
 	<!-- Blog -->
 	<div class="blog">
 		<div class="container">
+			<h2>Mapa del Sitio</h2>
 			<div class="row">
 				<div class="col-lg-12">
 					<ul>

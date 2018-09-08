@@ -80,70 +80,84 @@
 						<!-- Portfolio Item -->
 						<div class="card disen_web">
 							<div class="card_image">
-								<img class="card-img-top" src="{{ asset('rango/images/portfolio_1.jpg')}}" alt="image by https://unsplash.com/@heysupersimi">
+								<img class="card-img-top" src="{{ asset('rango/images/portafolio/portafolio_Aventura.png')}}" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
 								<div class="card-header">Diseño Web</div>
-								<div class="card-title">3D Project for inhouse</div>
-								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="#">read more</a></div>
+								<div class="card-title">Flyer para Aventura</div>
+								<div class="card-text">Restaurante de día y bar de noche. Aventura es un local situado en la parte norte de ciudad, en el barrio de Carcelén industrial, el cual solicito la creación de un flyer que abarcara sus dos actividades.</div>
+								<div class="card-link"><a href="{{route('aventura')}}">Ver Más</a></div>
 							</div>
 						</div>
 
 						<!-- Portfolio Item -->
 						<div class="card disen_grafico">
 							<div class="card_image">
-								<img class="card-img-top" src="{{ asset('rango/images/portfolio_2.jpg')}}" alt="image by https://unsplash.com/@anthonydelanoix">
+								<img class="card-img-top" src="{{ asset('rango/images/portafolio/portafolio_shawarma_frente.png')}}" alt="image by https://unsplash.com/@anthonydelanoix">
 							</div>
 							
 							<div class="card-body">
 								<div class="card-header">Diseño Gráfico</div>
 								<div class="card-title">Flyer para la Shawarmeria</div>
-								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="{{route('shawarmeria')}}">read more</a></div>
+								<div class="card-text">Foodtruck de comida árabe. La Shawameria es un restaurante de comida rápida árabe ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un flyer para impulsar sus nuevos platos y aumentar la clientela por apertura.</div>
+								<div class="card-link"><a href="{{route('flayer_shawarmeria')}}">Ver Más</a></div>
 							</div>
 						</div>
 
 						<!-- Portfolio Item -->
 						<div class="card aplicaciones">
 							<div class="card_image">
-								<img class="card-img-top" src="{{ asset('rango/images/portfolio_3.jpg')}}" alt="image by https://unsplash.com/@heysupersimi">
+								<img class="card-img-top" src="{{ asset('rango/images/portafolio/portafolio_Shawarmeria_menu_grande.png')}}" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
 								<div class="card-header">Aplicaciones</div>
-								<div class="card-title">3D Project for inhouse</div>
-								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+								<div class="card-title">Menu para la Shawarmeria</div>
+								<div class="card-text">Foodtruck de comida árabe. La Shawameria es un restaurante de comida rápida árabe ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un menu para presentar sus nuevos platos y aumentar la clientela.</div>
+								<div class="card-link"><a href="{{route('menu_shawarmeria')}}">Ver Más</a></div>
 							</div>
 						</div>
 
 						<!-- Portfolio Item -->
 						<div class="card disen_grafico">
 							<div class="card_image">
-								<img class="card-img-top" src="{{ asset('rango/images/portfolio_4.jpg')}}" alt="image by https://unsplash.com/@anthonydelanoix">
+								<img class="card-img-top" src="{{ asset('rango/images/portafolio/portafolio_Nativos.png')}}" alt="image by https://unsplash.com/@anthonydelanoix">
 							</div>
 							
 							<div class="card-body">
 								<div class="card-header">Diseño Gráfico</div>
-								<div class="card-title">Identity branding for company</div>
-								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+								<div class="card-title">Flyer para Nativos</div>
+								<div class="card-text">Foodtruck de comida venezolana. Nativos es un restaurante de comida rápida venezolana ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un flyer para presentar sus nuevos platos y aumentar la clientela.</div>
+								<div class="card-link"><a href="{{route('nativos')}}">Ver Más</a></div>
 							</div>
 						</div>
 
 						<!-- Portfolio Item -->
 						<div class="card desar_web">
 							<div class="card_image">
-								<img class="card-img-top" src="{{ asset('rango/images/portfolio_5.jpg')}}" alt="image by https://unsplash.com/@heysupersimi">
+								<img class="card-img-top" src="{{ asset('rango/images/portafolio/portafolio_Previfire.png')}}" alt="image by https://unsplash.com/@heysupersimi">
 							</div>
 							
 							<div class="card-body">
 								<div class="card-header">Desarrollo Web</div>
-								<div class="card-title">3D Project for inhouse</div>
-								<div class="card-text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio ves tibul.  Nec odio vestibulum est mattis.</div>
-								<div class="card-link"><a href="portfolio_item.html">read more</a></div>
+								<div class="card-title">Flyer para Previfire</div>
+								<div class="card-text">Local de seguridad industrial.  Previfire es un local de seguridad insutrial ubicado en el centro de la ciudad, en el sector la tola, el cual solicito la creación de un flyer para presentar sus nuevos servicios, formas de contacto y aumentar la clientela.</div>
+								<div class="card-link"><a href="{{route('previfire')}}">Ver Más</a></div>
+							</div>
+						</div>
+
+						<!-- Portfolio Item -->
+						<div class="card desar_web">
+							<div class="card_image">
+								<img class="card-img-top" src="{{ asset('rango/images/portafolio/portafolio_Previfire_Logo.png')}}" alt="image by https://unsplash.com/@heysupersimi">
+							</div>
+							
+							<div class="card-body">
+								<div class="card-header">Desarrollo Web</div>
+								<div class="card-title">Logo para Previfire</div>
+								<div class="card-text">Local de seguridad industrial.  Previfire es un local de seguridad insutrial ubicado en el centro de la ciudad, en el sector la tola, el cual solicito la creación de un logo que los representara y distinguiera de sucompetencia, para ser usado en toda su publicidad.</div>
+								<div class="card-link"><a href="{{route('previfire_logo')}}">Ver Más</a></div>
 							</div>
 						</div>
 

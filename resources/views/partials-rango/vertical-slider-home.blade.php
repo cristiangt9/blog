@@ -25,7 +25,7 @@
 										<div class="person_meta">
 											<div class="person_name">{{$post->category->name}}</div>
 											@foreach($post->tags as $tag)
-												<div class="person_title">{{$tag->name}}</div>
+												<div class="person_title card-tag">#{{$tag->name}}</div>
 											@endforeach
 										</div>
 									</div>

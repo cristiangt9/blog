@@ -267,7 +267,7 @@ section
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px #00AFFA;
 	background: transparent;
 }
 .button a
@@ -278,7 +278,7 @@ section
 	font-weight: 700;
 	line-height: 50px;
 	text-transform: uppercase;
-	color: #452b78;
+	color: #00AFFA;
 }
 .prlx_parent
 {
@@ -648,6 +648,7 @@ section
 
 .portfolio
 {
+	padding-top: 1px;
 	padding-bottom: 130px;
 }
 .portfolio_slider_container
@@ -744,7 +745,7 @@ section
 {
 	width: 18px;
 	height: 18px;
-	background: #452b78;
+	background: #00AFFA;
 }
 .portfolio_content
 {
@@ -771,7 +772,7 @@ section
 }
 .portfolio_text
 {
-
+	text-align: justify;
 }
 .portfolio_button
 {
@@ -780,7 +781,7 @@ section
     width: 226px;
     text-align: center;
     border: solid 2px transparent;
-    background: #452b78;
+    background: #00AFFA;
     margin-top: 19px;
 }
 .portfolio_button a
@@ -796,11 +797,11 @@ section
 .portfolio_button:hover
 {
 	background: transparent;
-	border-color: #452b78;
+	border-color: #00AFFA;
 }
 .portfolio_button:hover a
 {
-	color: #452b78;
+	color: #00AFFA;
 }
 .portfolio_button_2
 {
@@ -840,12 +841,10 @@ section
 /*********************************
 6. Footer
 *********************************/
-
 .footer
 {
 	padding-top: 99px;
 	padding-bottom: 82px;
-	border-top: solid 1px #dcdcdc;
 }
 .footer_logo
 {
@@ -854,7 +853,7 @@ section
 }
 .footer_logo a
 {
-	color: #452b78;
+	color: #00AFFA;
 	line-height: 1;
 }
 .footer_intro p
@@ -886,7 +885,7 @@ section
 }
 .footer_social ul li a:hover i
 {
-	color: #1b0d37;
+	color: #00AFFA;
 }
 .footer_cr
 {
@@ -894,6 +893,10 @@ section
 	font-weight: 500;
 	color: #cacaca;
 	margin-top: 65px;
+}
+.footer_cr a
+{
+	color: #cacaca;
 }
 .footer_cr_2
 {
@@ -935,5 +938,8 @@ section
 }
 .footer_col ul li a:hover
 {
-	color: #28262d;
+	color: #00AFFA;
+}
+.footer_dev{
+	color: #00AFFA;
 }

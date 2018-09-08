@@ -803,6 +803,7 @@ section
 .card-text
 {
 	line-height: 1.86;
+	text-align: justify;
 }
 .card-link
 {

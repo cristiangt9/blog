@@ -46,10 +46,6 @@ class PagesController extends Controller
     {
     	return view('contact-rango');
     }
-    public function shawarmeria()
-    {
-        return view('portfolio.shawarmeria_1');
-    }
     public function show_blog(Post $post)
     {
         if ($post->isPublished() || auth()->check()) {
@@ -63,5 +59,29 @@ class PagesController extends Controller
     public function webMap()
     {
         return view('mapa_web');
+    }
+        public function shawarmeria_1()
+    {
+        return view('portfolio.shawarmeria_1');
+    }
+    public function shawarmeria_2()
+    {
+        return view('portfolio.shawarmeria_2');
+    }
+    public function nativos()
+    {
+        return view('portfolio.nativos');
+    }
+    public function aventura()
+    {
+        return view('portfolio.aventura');
+    }
+    public function previfire()
+    {
+        return view('portfolio.previfire');
+    }
+    public function previfire_logo()
+    {
+        return view('portfolio.previfire_logo');
     }
 }

@@ -77,13 +77,13 @@
 				<!-- Slider Item -->
 				<div class="slider_item">
 					<!-- image by https://unsplash.com/@heysupersimi -->
-					<div class="slider_item_background" style="background-image: url(../rango/images/portafolio/slider_shawarma.png)"></div>
+					<div class="slider_item_background" style="background-image: url(../rango/images/portafolio/slider_Shawarmeria_menu_grande.png)"></div>
 				</div>
 
 				<!-- Slider Item -->
 				<div class="slider_item">
 					<!-- image by https://unsplash.com/@heysupersimi -->
-					<div class="slider_item_background" style="background-image: url(../rango/images/portfolio_slider.jpg)"></div>
+					<div class="slider_item_background" style="background-image: url(../rango/images/portafolio/slider_shawarma_1.png)"></div>
 				</div>
 
 				<!-- Slider Item -->
@@ -125,15 +125,14 @@
 					
 					<div class="col-lg-4 portfolio_title_container">
 						<div class="portfolio_category">Diseño Gráfico</div>
-						<h2 class="portfolio_title">Flyer para la Shawarmeria</h2>
+						<h2 class="portfolio_title">Menú para la Shawarmeria</h2>
 					</div>
 
 				</div>
-
 				<div class="row">
 
 					<div class="col-lg-4 order-lg-1 order-2">
-						<p class="portfolio_text">Foodtruck de comida árabe. La Shawameria es un restaurante de comida rápida árabe ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un flyer para impulsar sus nuevos platos y aumentar la clientela por apertura.</p>
+						<p class="portfolio_text">Foodtruck de comida árabe. La Shawameria es un restaurante de comida rápida árabe ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un menu para presentar sus nuevos platos y aumentar la clientela.</p>
 					</div>
 
 					<div class="col-lg-4 order-lg-2 order-3">
@@ -165,12 +164,11 @@
 
 						</div>
 					</div>
-
 				</div>
 				<div class="row">
 					<div class="portfolio_button portfolio_button_1 trans_200">
-							<a class="trans_200" href="{{route('portafolio')}}">Ver otros Proyectos</a>
-						</div>
+						<a class="trans_200" href="{{route('portafolio')}}">Ver otros Proyectos</a>
+					</div>
 				</div>
 			</div>
 
