@@ -61,7 +61,16 @@
 						<li class="nivel_1"><a href="{{ route('sobre-mi')}}">Sobre mi</a></li>
 						<li class="nivel_1"><a href="{{ route('habilidades')}}">Habilidades</a></li>
 						<li class="nivel_1"><a href="{{ route('servicios')}}">Servicios</a></li>
-						<li class="nivel_1"><a href="{{ route('portafolio')}}">Portafolio</a></li>
+						<li class="nivel_1"><a href="{{ route('portafolio')}}">Portafolio</a>
+							<ul>
+								<li class="nivel_2"><a href="{{route('aventura')}}">Flyer para Aventura</a></li>
+								<li class="nivel_2"><a href="{{route('flayer_shawarmeria')}}">Flyer para la Shawarmeria</a></li>
+								<li class="nivel_2"><a href="{{route('menu_shawarmeria')}}">Menú para la Shawarmeria</a></li>
+								<li class="nivel_2"><a href="{{ route('nativos')}}">Flyer para Nativos</a></li>
+								<li class="nivel_2"><a href="{{ route('previfire')}}">Flyer para Previfire</a></li>
+								<li class="nivel_2"><a href="{{ route('previfire_logo')}}">Logo para Previfire</a></li>
+							</ul>
+						</li>
 						<li class="nivel_1"><a href="{{ route('blog')}}">Blog</a></li>
 						<li class="nivel_1"><a href="{{ route('contactame')}}">Contactame</a></li>
 						<li class="nivel_1"><a href="#">Web</a>

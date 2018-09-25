@@ -87,7 +87,9 @@
           	<div class="dropzone"></div>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-success btn-block" name="Actualizar Publicación">
+            <button name="submit" type="submit" class="btn btn-primary btn-block" value="Actualizar Publicación">
+              Actualizar Publicación
+            </button>
           </div>
         </div>
       </div>

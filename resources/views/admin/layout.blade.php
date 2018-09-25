@@ -193,7 +193,7 @@ desired effect
 
                 <p>
                   {{ auth()->user()->name}} - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <small>Member since Nov. 2015</small>
                 </p>
               </li>
               <!-- Menu Body -->

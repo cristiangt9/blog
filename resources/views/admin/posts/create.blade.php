@@ -10,7 +10,7 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="{{route('dashboard')}}"><i class="fa fa-dashboard"></i> Inicio</a></li>
-        <li> <a href="{{route('posts')}}"><i class="fa fa-list"></i>Posts</a></li>
+        <li><a href="{{route('posts')}}"><i class="fa fa-list"></i>Posts</a></li>
         <li class="active">Nuevo</li>
       </ol>
     </section>
@@ -83,7 +83,9 @@
             <div class="text-danger">{!! $errors->first('excerpt','<span class="help-block">:message</span>') !!}</div>
           </div>
           <div class="form-group">
-            <input type="submit" class="btn btn-primary btn-block" name="Guardar Publicación">
+            <button name="submit" type="submit" class="btn btn-primary btn-block" value="Guardar Publicación">
+              Guardar Publicación
+            </button>
           </div>
         </div>
       </div>

@@ -42,6 +42,7 @@ Route::get('/contact.html', function () {return view('contact');})->name('contac
 Route::get('categorias/{category}','CategoriesController@show')->name('categories.show');
 Route::get('etiquetas/{tag}','tagsController@show')->name('tags.show');
 
+/*Admin*/
 Route::group(['prefix' => 'admin', 'middleware' => 'auth' ], function(){
 	Route::get('/', 'PagesController@index')->name('dashboard');
 	Route::get('posts', 'Admin\PostsController@index')->name('posts');
@@ -54,6 +55,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth' ], function(){
 	Route::delete('photos/{photo}', 'Admin\PhotosController@destroy')->name('photos.delete');
 });
 
+/*Newsletter*/
+Route::post('newsletter/store', 'NewsletterController@store')->name('newsletter.store');
+Route::get('newsletter/Verify/{newsletter}', 'NewsletterController@update')->name('newsletter.update');
+
+/*Auth*/
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
 Route::post('logout', 'Auth\LoginController@logout')->name('logout');

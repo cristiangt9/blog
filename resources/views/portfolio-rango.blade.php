@@ -113,7 +113,7 @@
 							
 							<div class="card-body">
 								<div class="card-header">Aplicaciones</div>
-								<div class="card-title">Menu para la Shawarmeria</div>
+								<div class="card-title">Menú para la Shawarmeria</div>
 								<div class="card-text">Foodtruck de comida árabe. La Shawameria es un restaurante de comida rápida árabe ubicado en el centro norte de la ciudad, en el sector Iñaquito, el cual solicito la creación de un menu para presentar sus nuevos platos y aumentar la clientela.</div>
 								<div class="card-link"><a href="{{route('menu_shawarmeria')}}">Ver Más</a></div>
 							</div>
