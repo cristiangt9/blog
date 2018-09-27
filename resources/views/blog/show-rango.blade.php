@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="http://blog.test/img/mifavicon.png">
 <link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
 <link href="{{ asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
-<link href="{{ asset('rango/plugins/colorbox/colorbox.css" rel="stylesheet"')}} type="text/css">
+<link href="{{ asset('rango/plugins/colorbox/colorbox.css')}}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_post_styles.css')}}">
 <link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_post_responsive.css')}}">
 </head>
@@ -61,7 +61,7 @@
 					
 					<!-- Blog Post -->
 
-					<div class="blog_container">
+					<div class="blog_container" id="blog_container">
 
 						<!-- Image -->
 						<div class="blog_post_image">
@@ -73,31 +73,40 @@
 							<div class="blog_post_date">{{ $post->published_at->format('M d')}} / {{ $post->user->name}}</div>
 							<h2 class="blog_post_title">{{ $post->title }}</h2>
 							{!! $post->body !!}
+							<br>
+							<div class="card-category"><a href="{{route('categories.show', $post->category)}}">{{$post->category->name}} </a></div>
 							@foreach($post->tags as $posttag)
-								<div class="card-tag"><a href="#">#{{$posttag->name}} </a></div>
+								<div class="card-tag"><a href="{{route('tags.show', $posttag)}}">#{{$posttag->name}} </a></div>
 							@endforeach
 						</div>
 
 						<!-- Comments -->
 						<div class="blog_post_comments">
-							<div class="comments_title">Comments</div>
+							<div class="comments_title">Comentarios</div>
+							@if($comments->count()<1)
+								<div class="comments_name">No hay comentarios...</div>
+							@endif
 							<ul class="comments_container">
 
 								<!-- Comment -->
+							
+							@foreach($comments as $comment )
 								<li class="comment">
 									<div class="comment_content clearfix">
 										<div class="comment_image"><img src="images/comment_1.jpg" alt=""></div>
 										<div class="comment_body">
-											<div class="comment_name">Michael Smith</div>
-											<div class="comment_date">27 oct 2017</div>
-											<p class="comment_text">Curabitur et elementum orci. Nam vitae laoreet quam. Vestibulum a erat quis nulla tempus mollis in eu orci. Nulla sed eleifend ex, ultrices convallis arcu. Pellentesque et enim non augue varius hendrerit</p>
-											<div class="comment_link">
-												<a href="#">reply</a>
-											</div>
+											<div class="comment_name">{{$comment->name}}</div>
+											<div class="comment_date">{{$comment->published_at}}</div>
+											<div class="comment_text">{{$comment->subject}}</div>
+											<p class="comment_text">{{$comment->message}}</p>
+											<a href="#">{{$comment->likes}} <i class="fa fa-thumbs-up" aria-hidden="true"></i>  </a>
+											<!--<div class="comment_link next_section nav_links" data-scroll-to=".reply">
+												<a href="">reply</a>
+											</div>-->
 										</div>
 									</div>
 
-									<ul class="children">
+									{{-- <ul class="children">
 										<li class="comment">
 											<div class="comment_content clearfix">
 												<div class="comment_image"><img src="images/comment_2.jpg" alt=""></div>
@@ -105,42 +114,46 @@
 													<div class="comment_name">Michael Smith</div>
 													<div class="comment_date">27 oct 2017</div>
 													<p class="comment_text">Elementum orci. Nam vitae laoreet quam. Vestibulum a erat quis nulla tempus mollis in eu orci. Nulla sed eleifend ex, ultrices convallis arcu. Pellentesque et enim non augue varius hendrerit</p>
-													<div class="comment_link">
-														<a href="#">reply</a>
+													<div class="comment_link next_section nav_links" data-scroll-to=".reply">
+														<a href="">reply</a>
 													</div>
 												</div>
 											</div>
 										</li>
-									</ul>
+									</ul> --}}
 								</li>
-
+							@endforeach
 							</ul>
 						</div>
 
 						<!-- Reply -->
 
-						<div class="reply">
+						<div class="reply" id="reply">
 							
-							<div class="reply_title">Envíame un mensaje</div>
+							<div class="reply_title">Haz un comentario</div>
 							<div class="reply_form_container">
 								
 								<!-- Reply Form -->
 
-								<form id="reply_form" action="post">
+								<form method="POST" action="{{ route('comment.store',$post)}}">
+									@csrf
 									<div>
-										<input id="reply_form_name" class="input_field reply_form_name" type="text" placeholder="Nombre" required="required" data-error="Name is required.">
-										<input id="reply_form_email" class="input_field reply_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-										<input id="reply_form_subject" class="input_field reply_form_subject" type="text" placeholder="Asunto" required="required" data-error="Subject is required.">
+										<input type="checkbox" name="is_reply" checked style="display: none;">
+										<input id="reply_form_name" class="input_field reply_form_name" name="name" type="text" placeholder="Nombre" required="required" data-error="Name is required.">
+										<input id="reply_form_email" class="input_field reply_form_email" name="email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+										<input id="reply_form_subject" class="input_field reply_form_subject" name="subject" type="text" placeholder="Asunto" required="required" data-error="Subject is required.">
 										<textarea id="reply_form_message" class="text_field reply_form_message" name="message"  placeholder="Mensaje" rows="4" required data-error="Please, write us a message."></textarea>
 									</div>
 									<div>
 										<button id="reply_form_submit" type="submit" class="reply_submit_btn trans_300" value="Submit">
-											Enviar mensaje
+											Enviar comentario
 										</button>
 									</div>
 
 								</form>
-
+							@if (session()->has('comentarios'))
+          						<div class="alert alert-success">{{ session('comentarios') }}</div>
+      						@endif
 							</div>
 						</div>
 					</div>

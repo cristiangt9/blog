@@ -20,7 +20,7 @@ Route::get('/blog', 'PagesController@blog')->name('blog');
 Route::get('/contactame', 'PagesController@contact')->name('contactame');
 Route::get('/mapa-del-sitio', 'PagesController@webmap')->name('mapaweb');
 
-/*portafolio*/
+/*portfolio*/
 Route::group(['prefix' => 'portafolio'], function(){
 	Route::get('flayer-shawarmeria', 'PagesController@shawarmeria_1')->name('flayer_shawarmeria');
 	Route::get('menu-shawarmeria', 'PagesController@shawarmeria_2')->name('menu_shawarmeria');
@@ -32,15 +32,17 @@ Route::group(['prefix' => 'portafolio'], function(){
 
 /*blog */
 Route::get('blog/{post}', 'PagesController@show_blog')->name('blog.show');
-
+Route::get('blog/categorias/{category}','CategoriesController@show')->name('categories.show');
+Route::get('blog/etiquetas/{tag}','tagsController@show')->name('tags.show');
+/*Comment*/
+Route::post('comment/{post}/store', 'CommentsController@store')->name('comment.store');
 
 Route::get('/about.html', function () {return view('about');})->name('about');
 Route::get('/archive.html', function () {return view('archive');})->name('archive');
 Route::get('/contact.html', function () {return view('contact');})->name('contact');
 
 // Route::get('blog/{post}','PostsController@show')->name('posts.show');
-Route::get('categorias/{category}','CategoriesController@show')->name('categories.show');
-Route::get('etiquetas/{tag}','tagsController@show')->name('tags.show');
+
 
 /*Admin*/
 Route::group(['prefix' => 'admin', 'middleware' => 'auth' ], function(){

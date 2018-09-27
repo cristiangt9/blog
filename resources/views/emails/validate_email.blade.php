@@ -7,7 +7,7 @@
 <body>
 	<h3>Enhorabuena {{$newsletter->email}}</h3>
 
-	<p>Por favor haz click en el link de activacion del email para confirmarlo: </p>
+	<p>Por favor haz click en el link de activación del e-mail para confirmarlo: </p>
 	<a href="http://blog.test/newsletter/Verify/{{$newsletter->token}}">http://blog.test/Newsletter/Verify/{{$newsletter->token}}</a>
 </body>
 </html>

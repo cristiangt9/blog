@@ -23,7 +23,7 @@
             @if (is_array($element))
                 @foreach ($element as $page => $url)
                     @if ($page == $paginator->currentPage())
-                        <li aria-current="page"><a href="#" class="pagination-active {{request()->is('blog') ? 'active' : '' }}">{{ $page }}</a></li>
+                        <li aria-current="page"><a href="#" class="pagination-active {{request()->is('blog*') ? 'active' : '' }}">{{ $page }}</a></li>
                     @else
                         <li><a href="{{ $url }}">{{ $page }}</a></li>
                     @endif

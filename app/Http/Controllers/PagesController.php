@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
 use App\Category;
+use App\Comment;
+use App\Post;
 use App\Tag;
 
 class PagesController extends Controller
@@ -51,7 +52,8 @@ class PagesController extends Controller
         if ($post->isPublished() || auth()->check()) {
             $categories = Category::all();
             $tags = Tag::all();
-            return view('blog.show-rango',compact('post','categories','tags'));      
+            $comments = Comment::where('post_id', $post->id)->get();
+            return view('blog.show-rango',compact('post','categories','tags','comments'));      
         }
 
         abort(404);

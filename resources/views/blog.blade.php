@@ -35,7 +35,7 @@
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(rango/images/blog_background.png)"></div>
+			<div class="home_background prlx" style="background-image:url({{asset('rango/images/blog_background.png')}})"></div>
 		</div>
 		
 		<div class="home_title">
@@ -73,8 +73,9 @@
 										<div class="card-text">
 											{{ $post->excerpt}}
 										</div>
+										<div class="card-category"><a href="{{route('categories.show', $post->category)}}">{{$post->category->name}} </a></div>
 										@foreach($post->tags as $posttag)
-											<div class="card-tag"><a href="#">#{{$posttag->name}} </a></div>
+											<div class="card-tag"><a href="{{route('tags.show', $posttag)}}">#{{$posttag->name}} </a></div>
 										@endforeach
 									</div>
 								</div>
@@ -145,7 +146,7 @@
 							<div class="sidebar_categories">
 								<ul>
 									@foreach($categories as $category)
-									<li><a href="#">{{$category->name}}</a></li>
+									<li><a href="{{route('categories.show', $category->name)}}">{{$category->name}}</a></li>
 									@endforeach
 								</ul>
 							</div>
@@ -199,7 +200,7 @@
 							
 							<div class="tags_container d-flex flex-row flex-wrap">
 								@foreach($tags as $tag)
-									<div class="tag_item"><a href="#">{{$tag->name}}</a></div>
+									<div class="tag_item"><a href="{{route('tags.show', $tag->name)}}">{{$tag->name}}</a></div>
 								@endforeach
 							</div>
 						</div>
