@@ -36,6 +36,7 @@ Route::get('blog/categorias/{category}','CategoriesController@show')->name('cate
 Route::get('blog/etiquetas/{tag}','tagsController@show')->name('tags.show');
 /*Comment*/
 Route::post('comment/{post}/store', 'CommentsController@store')->name('comment.store');
+Route::put('comment/{comment}', 'CommentsController@update')->name('comment.update');
 
 Route::get('/about.html', function () {return view('about');})->name('about');
 Route::get('/archive.html', function () {return view('archive');})->name('archive');

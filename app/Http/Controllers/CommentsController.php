@@ -84,9 +84,11 @@ class CommentsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,Comment $comment)
     {
-        //
+        $comment->likes++;
+        $comment->update();
+        return back();
     }
 
     /**

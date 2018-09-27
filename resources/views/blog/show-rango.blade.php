@@ -99,12 +99,34 @@
 											<div class="comment_date">{{$comment->published_at}}</div>
 											<div class="comment_text">{{$comment->subject}}</div>
 											<p class="comment_text">{{$comment->message}}</p>
-											<a href="#">{{$comment->likes}} <i class="fa fa-thumbs-up" aria-hidden="true"></i>  </a>
+											<div>
+												<div id="likes">{{$comment->likes}}
+												</div> 
+												<form method="POST" action="{{ route('comment.update',$comment)}}">
+													@csrf
+													@method('PUT')
+													<input type="checkbox" name="is_reply" checked style="display: none;">
+													<button class="like" type="submit" onclick="liked({{$comment->likes}})"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+												</form>	
+											</div>
 											<!--<div class="comment_link next_section nav_links" data-scroll-to=".reply">
 												<a href="">reply</a>
 											</div>-->
 										</div>
 									</div>
+									
+									
+									<div>
+										<input type="number" name="is_reply" checked style="display: none;">
+									</div>
+									<div>
+										<button id="like_form_submit" type="submit" class="reply_submit_btn trans_300" value="Submit" style="display: none">
+										</button>
+									</div>
+
+								
+
+
 
 									{{-- <ul class="children">
 										<li class="comment">
@@ -281,9 +303,9 @@
 
 						<div class="sidebar_section quote_section">
 							
-							<div class="sidebar_section_title">Quote</div>
+							<div class="sidebar_section_title">Pensamiento</div>
 							<div class="quote_quote"><img src="images/quote.svg" alt=""></div>
-							<p class="quote_text">Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volutpat. Donec fermen tum convallis ante eget tristique. Sed lacinia turpis at ultricies vestibulum.</p>
+							<p class="quote_text">Hazlo simple: tan simple como sea posible, pero no más. Albert Einstein</p>
 						</div>
 
 					</div>
@@ -309,6 +331,17 @@
 <script src="{{ asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
 <script src="{{ asset('rango/plugins/easing/easing.js')}}"></script>
 <script src="{{ asset('rango/js/blog_post_custom.js')}}"></script>
+<script src="{{ asset('rango/js/comments.js')}}"></script>
+<!-- Este script permite mantener la posición de la página cuando se refresca ***************** -->
+<script>
+window.onload=function(){
+var pos=window.name || 0;
+window.scrollTo(0,pos);
+}
+window.onunload=function(){
+window.name=self.pageYOffset || (document.documentElement.scrollTop+document.body.scrollTop);
+}
+</script>
 </body>
 
 </html>
