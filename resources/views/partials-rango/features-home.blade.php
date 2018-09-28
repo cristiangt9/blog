@@ -51,7 +51,7 @@
 					</div>
 
 					<div class="button features_button_2 trans_200">
-						<a href="#" class="trans_200">discover more</a>
+						<a href="{{route('servicios')}}" class="trans_200">Descubre más</a>
 					</div>
 
 				</div>

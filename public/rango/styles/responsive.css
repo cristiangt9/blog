@@ -541,7 +541,7 @@
 	.header.scrolled
 	{
 		height: 50px;
-		background: #00AFFA;
+		background: repeating-linear-gradient(to bottom right, #3f95ea 0%, #52d3aa 100%);
 	}
 	.logo a
 	{
@@ -696,18 +696,3 @@
 	}
 }
 
-@media only screen and (max-width: 300px)
-{
-	.logo a
-	{
-		font-size: 9px;
-	}
-}
-
-@media only screen and (max-width: 200px)
-{
-	.logo a
-	{
-		font-size: 8px;
-	}
-}
