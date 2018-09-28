@@ -319,5 +319,43 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+	.newsletter_email
+	{
+		font-size: 12px;
+	}
+	::-webkit-input-placeholder
+{
+	font-style: italic !important;
+	font-size: 10px !important;
+	color: #909090 !important;
+	font-weight: 400 !important;
+}
+:-moz-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #909090 !important;
+	font-weight: 400 !important;
+}
+::-moz-placeholder
+{
+	font-style: italic !important;
+	font-size: 10px !important;
+	color: #909090 !important;
+	font-weight: 400 !important;
+} 
+:-ms-input-placeholder
+{ 
+	font-style: italic !important;
+	font-size: 10px !important;
+	color: #909090 !important;
+	font-weight: 400 !important;
+}
+::input-placeholder
+{
+	font-style: italic !important;
+	font-size: 10px !important;
+	color: #909090 !important;
+	font-weight: 400 !important;
+}
 }

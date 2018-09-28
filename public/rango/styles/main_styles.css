@@ -396,6 +396,7 @@ section
 .main_nav
 {
 	flex-basis: 200%;
+
 }
 .main_nav ul
 {
@@ -618,7 +619,7 @@ section
 .hero_slider_nav_right  
 {
 	/*display: none;*/
-	right: 300px;
+	right: 26.5%;
 }
 .hero_slider_nav div
 {
