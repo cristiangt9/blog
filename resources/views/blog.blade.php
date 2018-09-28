@@ -7,11 +7,11 @@
 <meta name="description" content="RanGO Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="http://blog.test/img/mifavicon.png">
-<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
-<link href="{{ asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
-<link href="{{ asset('rango/plugins/colorbox/colorbox.css" rel="stylesheet"')}} type="text/css">
-<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
+<link href="{{ secure_asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
+<link href="{{ secure_asset('rango/plugins/colorbox/colorbox.css" rel="stylesheet"')}} type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/blog_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/blog_responsive.css')}}">
 </head>
 
 <body>
@@ -35,7 +35,7 @@
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url({{asset('rango/images/blog_background.png')}})"></div>
+			<div class="home_background prlx" style="background-image:url({{secure_asset('rango/images/blog_background.png')}})"></div>
 		</div>
 		
 		<div class="home_title">
@@ -66,7 +66,7 @@
 						<div class="post_container" data-masonry='{ "itemSelector": ".card", "gutter": 30 }'>
 							@foreach($posts as $post)
 								<div class="card trans_200">
-									<img class="card-img-top" src="{{ asset('rango/images/blog_1.jpg')}}" alt="">
+									<img class="card-img-top" src="{{ secure_asset('rango/images/blog_1.jpg')}}" alt="">
 									<div class="card-body">
 										<div class="card-header">{{ $post->published_at->format('M d')}} / {{ $post->user->name}}</div>
 										<div class="card-title"><a href="{{route('blog.show',$post)}}">{{ $post->title }}</a></div>
@@ -160,32 +160,32 @@
 								<ul class="gallery_items d-flex flex-row align-items-start justify-content-between flex-wrap">
 									<li class="gallery_item">
 										<a class="colorbox" href="https://images.unsplash.com/photo-1463704131914-97e5aaa0e339?auto=format&fit=crop&w=720&q=80">
-											<img src="{{ asset('rango/images/gallery_1.jpg')}}" alt="https://unsplash.com/@matthewkane">
+											<img src="{{ secure_asset('rango/images/gallery_1.jpg')}}" alt="https://unsplash.com/@matthewkane">
 										</a>
 									</li>
 									<li class="gallery_item">
 										<a class="colorbox" href="https://images.unsplash.com/photo-1487260211189-670c54da558d?auto=format&fit=crop&w=720&q=80">
-											<img src="{{ asset('rango/images/gallery_2.jpg')}}" alt="https://unsplash.com/@emileseguin">
+											<img src="{{ secure_asset('rango/images/gallery_2.jpg')}}" alt="https://unsplash.com/@emileseguin">
 										</a>
 									</li>
 									<li class="gallery_item">
 										<a class="colorbox" href="https://images.unsplash.com/photo-1499763874088-6f30adc715b6?auto=format&fit=crop&w=678&q=80">
-											<img src="{{ asset('rango/images/gallery_3.jpg')}}" alt="https://unsplash.com/@naveenprajapat">
+											<img src="{{ secure_asset('rango/images/gallery_3.jpg')}}" alt="https://unsplash.com/@naveenprajapat">
 										</a>
 									</li>
 									<li class="gallery_item">
 										<a class="colorbox" href="https://images.unsplash.com/photo-1507915600431-5292809c5ab7?auto=format&fit=crop&w=720&q=80">
-											<img src="{{ asset('rango/images/gallery_4.jpg')}}" alt="https://unsplash.com/@saaout">
+											<img src="{{ secure_asset('rango/images/gallery_4.jpg')}}" alt="https://unsplash.com/@saaout">
 										</a>
 									</li>
 									<li class="gallery_item">
 										<a class="colorbox" href="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=720&q=80">
-											<img src="{{ asset('rango/images/gallery_5.jpg')}}" alt="">
+											<img src="{{ secure_asset('rango/images/gallery_5.jpg')}}" alt="">
 										</a>
 									</li>
 									<li class="gallery_item">
 										<a class="colorbox" href="https://images.unsplash.com/photo-1493847242172-d46053a1f671?auto=format&fit=crop&w=720&q=80">
-											<img src="{{ asset('rango/images/gallery_6.jpg')}}" alt="https://unsplash.com/@joeypilgrim">
+											<img src="{{ secure_asset('rango/images/gallery_6.jpg')}}" alt="https://unsplash.com/@joeypilgrim">
 										</a>
 									</li>
 								</ul>
@@ -228,19 +228,19 @@
 
 </div>
 
-<script src="{{ asset('rango/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{ asset('rango/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{ asset('rango/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/greensock/TweenMax.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/greensock/TimelineMax.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/greensock/animation.gsap.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
-<script src="{{ asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
-<script src="{{ asset('rango/plugins/easing/easing.js')}}"></script>
-<script src="{{ asset('rango/plugins/masonry/masonry.js')}}"></script>
-<script src="{{ asset('rango/js/blog_custom.js')}}"></script>
+<script src="{{ secure_asset('rango/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{ secure_asset('rango/styles/bootstrap4/popper.js')}}"></script>
+<script src="{{ secure_asset('rango/styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/greensock/TweenMax.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/greensock/TimelineMax.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/greensock/animation.gsap.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/easing/easing.js')}}"></script>
+<script src="{{ secure_asset('rango/plugins/masonry/masonry.js')}}"></script>
+<script src="{{ secure_asset('rango/js/blog_custom.js')}}"></script>
 </body>
 
 </html>
