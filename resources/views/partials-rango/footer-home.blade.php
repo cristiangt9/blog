@@ -101,8 +101,8 @@
 						<div class="footer_col_title">Web</div>
 						<ul>
 							<li><a href="{{route('blog')}}">Blog</a></li>
-							<li><a href="https://laraveles.com/foro/">Foros</a></li>
-							<li><a href="https://laravel.com">Laravel</a></li>
+							<li><a href="https://laraveles.com/foro/" target="_blank">Foros</a></li>
+							<li><a href="https://laravel.com" target="_blank">Laravel</a></li>
 							<li><a href="{{ route('mapaweb')}}">Mapa del sitio</a></li>
 						</ul>
 					</div>
