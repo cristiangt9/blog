@@ -7,7 +7,7 @@
 <meta name="description" content="RanGO Project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="http://blog.test/img/mifavicon.png">
-<link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
 <link href="{{ secure_asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
 <link href="{{ secure_asset('rango/plugins/colorbox/colorbox.css')}}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/blog_styles.css')}}">
