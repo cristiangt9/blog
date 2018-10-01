@@ -272,7 +272,7 @@ section
 	height: 54px;
 	width: 174px;
 	text-align: center;
-	border: solid 2px #452b78;
+	border: solid 2px #00AFFA;
 	background: transparent;
 }
 .button a
@@ -1101,7 +1101,7 @@ section
 }
 .footer_logo a
 {
-	color: #452b78;
+	color: #00AFFA;
 	line-height: 1;
 }
 .footer_intro p
