@@ -21,7 +21,7 @@
 
     # Redirect https to http
     RewriteCond %{HTTPS} on
-    RewriteRule (.*) http://radiant-thicket-28168.herokuapp.com [R=301,L,QSA]
+    RewriteRule (.*) http://radiant-thicket-28168.herokuapp.com/$1 [R=301,L,QSA]
 
     # Redirect www to 
     RewriteEngine On
