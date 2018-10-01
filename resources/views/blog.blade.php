@@ -209,10 +209,9 @@
 
 						<div class="sidebar_section quote_section">
 							
-							<div class="sidebar_section_title">Quote</div>
-							<div class="quote_quote"><img src="images/quote.svg" alt=""></div>
-							<p class="quote_text">Vivamus in urna eu enim porttitor consequat. Proin vitae pulvinar libero. Proin ut hendrerit metus. Aliquam erat volutpat. Donec fermen tum convallis ante eget tristique. Sed lacinia turpis at ultricies vestibulum.</p>
-						</div>
+							<div class="sidebar_section_title">Pensamiento</div>
+							<div class="quote_quote"><img src="{{ secure_asset('rango/images/quote.svg')}}" alt=""></div>
+							<p class="quote_text">Hazlo simple: tan simple como sea posible, pero no más. Albert Einstein</p>
 
 					</div>
 				</div>
