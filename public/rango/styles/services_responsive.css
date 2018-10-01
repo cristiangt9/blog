@@ -474,6 +474,14 @@
 	{
 		font-size: 15px;
 	}
+	.newsletter_email
+	{
+		width: calc(65%);
+	}
+	.newsletter_submit_button
+	{
+		width: calc(80%);
+	}
 }
 
 /************
