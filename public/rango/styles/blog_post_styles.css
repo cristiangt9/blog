@@ -150,7 +150,7 @@ h6::selection
 {
 	
 }
-::-webkit-input-placeholder
+newsletter::-webkit-input-placeholder
 {
 	font-style: italic !important;
 	font-size: 12px !important;
@@ -183,6 +183,41 @@ h6::selection
 	font-style: italic !important;
 	font-size: 12px !important;
 	color: #909090 !important;
+	font-weight: 400 !important;
+}
+.newsletter ::-webkit-input-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
+.newsletter :-moz-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
+.newsletter ::-moz-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+} 
+.newsletter :-ms-input-placeholder
+{ 
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
+.newsletter ::input-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
 	font-weight: 400 !important;
 }
 .form-control

@@ -182,6 +182,42 @@ h6::selection
 	color: #909090 !important;
 	font-weight: 400 !important;
 }
+
+.newsletter ::-webkit-input-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
+.newsletter :-moz-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
+.newsletter ::-moz-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+} 
+.newsletter :-ms-input-placeholder
+{ 
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
+.newsletter ::input-placeholder
+{
+	font-style: italic !important;
+	font-size: 12px !important;
+	color: #FFF !important;
+	font-weight: 400 !important;
+}
 .form-control
 {
 	color: #db5246;
