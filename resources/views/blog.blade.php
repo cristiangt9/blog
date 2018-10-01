@@ -8,10 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" href="http://blog.test/img/mifavicon.png">
 <link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/bootstrap4/bootstrap.min.css')}}">
-<link href="{{ secure_asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
+<link href="{{ asset('rango/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css')}}" rel="stylesheet" type="text/css">
 <link href="{{ secure_asset('rango/plugins/colorbox/colorbox.css')}}" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/blog_styles.css')}}">
-<link rel="stylesheet" type="text/css" href="{{ secure_asset('rango/styles/blog_responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_styles.css')}}">
+<link rel="stylesheet" type="text/css" href="{{ asset('rango/styles/blog_responsive.css')}}">
 </head>
 
 <body>
@@ -228,19 +228,19 @@
 
 </div>
 
-<script src="{{ secure_asset('rango/js/jquery-3.2.1.min.js')}}"></script>
-<script src="{{ secure_asset('rango/styles/bootstrap4/popper.js')}}"></script>
-<script src="{{ secure_asset('rango/styles/bootstrap4/bootstrap.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/greensock/TweenMax.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/greensock/TimelineMax.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/greensock/animation.gsap.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/easing/easing.js')}}"></script>
-<script src="{{ secure_asset('rango/plugins/masonry/masonry.js')}}"></script>
-<script src="{{ secure_asset('rango/js/blog_custom.js')}}"></script>
+<script src="{{ asset('rango/js/jquery-3.2.1.min.js')}}"></script>
+<script src="{{ asset('rango/styles/bootstrap4/popper.js')}}"></script>
+<script src="{{ asset('rango/styles/bootstrap4/bootstrap.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/greensock/TweenMax.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/greensock/TimelineMax.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/greensock/animation.gsap.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/greensock/ScrollToPlugin.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/colorbox/jquery.colorbox-min.js')}}"></script>
+<script src="{{ asset('rango/plugins/scrollTo/jquery.scrollTo.min.js')}}"></script>
+<script src="{{ asset('rango/plugins/easing/easing.js')}}"></script>
+<script src="{{ asset('rango/plugins/masonry/masonry.js')}}"></script>
+<script src="{{ asset('rango/js/blog_custom.js')}}"></script>
 </body>
 
 </html>
