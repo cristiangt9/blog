@@ -18,4 +18,13 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # Redirect https to http
+    RewriteCond %{HTTPS} on
+    RewriteRule (.*) http://radiant-thicket-28168.herokuapp.com [R=301,L,QSA]
+
+    # Redirect www to 
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www.http://radiant-thicket-28168.herokuapp.com/ [NC]
+    RewriteRule ^(.*)$ http://radiant-thicket-28168.herokuapp.com/$1 [L,R=301]
 </IfModule>
