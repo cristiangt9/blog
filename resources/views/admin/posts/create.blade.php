@@ -76,7 +76,7 @@
                   @endforeach
                 </select>
                 <div class="text-danger">{!! $errors->first('tags','<span class="help-block">:message</span>') !!}</div>
-              </div>
+          </div>
           <div class="form-group {{ $errors->has('excerpt') ? 'has-error' : ''}}">
             <label>Extracto de la publicación</label>
             <input type="text" class="form-control" name="excerpt" placeholder="Ingresa aquí el extracto de la publicación" value="{{old('excerpt')}}">
@@ -97,10 +97,7 @@
 
 @section('script')
   <!-- bootstrap datepicker -->
-  <link rel="stylesheet" href="{{ asset('adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')}}">
-
-  <!-- Select2 -->
-  <link rel="stylesheet" href="{{ asset('adminlte/bower_components/select2/dist/css/select2.min.css')}}">
+ 
  
 <!-- CK Editor -->
 <script src="{{ asset('adminlte/bower_components/ckeditor/ckeditor.js')}}"></script>

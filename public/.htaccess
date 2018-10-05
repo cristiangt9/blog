@@ -23,8 +23,8 @@
     RewriteCond %{HTTPS} on
     RewriteRule (.*) http://radiant-thicket-28168.herokuapp.com/$1 [R=301,L,QSA]
 
-    # Redirect www to 
+    # Redirect www to No-www
     RewriteEngine On
-    RewriteCond %{HTTP_HOST} ^www.http://radiant-thicket-28168.herokuapp.com/ [NC]
+    RewriteCond %{HTTP_HOST} ^www.radiant-thicket-28168.herokuapp.com [NC]
     RewriteRule ^(.*)$ http://radiant-thicket-28168.herokuapp.com/$1 [L,R=301]
 </IfModule>
